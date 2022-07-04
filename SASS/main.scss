@@ -182,12 +182,12 @@
     font-weight: bolder;
     font-size: 19px;
 
-    &:hover {
+    &:active {
       background-color: #9256dc31;
     }
   }
 
-  .btn-Fonctionnement:hover #icone {
+  .btn-Fonctionnement:active #icone {
     color: #9356dc;
   }
 
@@ -295,16 +295,49 @@
     }
   }
 
-  .Btn-love {
+  /***********************************************************BTN j'aime*****************************///////////////////////////
+
+  .contain-Btn-love {
     width: 25%;
     position: relative;
+  }
 
-    #Icon-Heart{
-      position: absolute;
-      left: 46%;
+  button {
+    position: absolute;
+    left: 46%;
     top: 29%;
-    font-size: 25px;
-    }
+    height: 25px;
+    width: 25px;
+    padding: 0%;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
     
+
+    #Icon-Heart {
+      position: absolute;
+      font-size: 25px;
+      color: #9356dc;
+      top: 0%;
+      left: 0%;
+
+    }
+
+    #Icon-Heart-2 {
+      position: absolute;
+      font-size: 25px;
+      color: #9356dc;
+      top: 0%;
+      left: 0%;
+      visibility: hidden;
+      transform: scale(0);
+    }
+
+    &:active #Icon-Heart-2 {
+      visibility: visible;
+      transition: all 0.5s;
+      transform: scale(1);
+    }
   }
 }
