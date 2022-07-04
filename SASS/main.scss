@@ -43,6 +43,18 @@
     width: 100%;
     height: 100%;
     border-radius: 15px 15px 0px 0px;
+    object-position: center bottom;
+  }
+
+  @mixin Attribut-size-bouton {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    padding: 0%;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
   }
 
   $Color-primary: #9356dc;
@@ -69,13 +81,23 @@
   body {
     margin: 0%;
   }
+  a {
+    text-decoration: none;
+  }
+
+  .Titre-des-restaurant {
+    font-family: Shrikhand;
+  }
 
   //**********************------------------------------------------HEADER-------------------------------*********///////////////////
   .contain-header {
-    @include width-height-max;
+    width: 100%;
+    height: 45px;
     @include flex-center;
     padding-top: 5%;
+    padding-bottom: 1%;
     box-shadow: 0px 1px 25px 1px rgba(0, 0, 0, 0.281);
+    position: relative;
     .box-logo {
       width: 45%;
     }
@@ -273,7 +295,6 @@
   .Img-restaurant-3,
   .Img-restaurant-4 {
     @include Position-Size-Image;
-    object-position: center bottom;
   }
 
   .Img-restaurant-2 {
@@ -289,55 +310,110 @@
     justify-content: center;
     align-items: flex-start;
     padding-left: 4%;
+    text-decoration: none;
+    color: black;
 
     .nom-restaurant {
       padding-bottom: 1.5%;
     }
   }
 
-  /***********************************************************BTN j'aime*****************************///////////////////////////
+  /***********************************************************BTN j'aime*****************************/ //////////////////////////
 
   .contain-Btn-love {
     width: 25%;
     position: relative;
   }
 
-  button {
-    position: absolute;
+  .Heart-acceuil {
+    @include Attribut-size-bouton;
     left: 46%;
     top: 29%;
-    height: 25px;
-    width: 25px;
-    padding: 0%;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
-    
+  }
 
-    #Icon-Heart {
-      position: absolute;
-      font-size: 25px;
-      color: #9356dc;
-      top: 0%;
-      left: 0%;
+  #Icon-Heart {
+    position: absolute;
+    font-size: 25px;
+    color: #9356dc;
+    top: 0%;
+    left: 0%;
+  }
 
-    }
+  #Icon-Heart-2 {
+    position: absolute;
+    font-size: 25px;
+    color: #9356dc;
+    top: 0%;
+    left: 0%;
+    visibility: hidden;
+    transform: scale(0);
+  }
 
-    #Icon-Heart-2 {
-      position: absolute;
-      font-size: 25px;
-      color: #9356dc;
-      top: 0%;
-      left: 0%;
-      visibility: hidden;
-      transform: scale(0);
-    }
+  .Heart-acceuil:active #Icon-Heart-2 {
+    visibility: visible;
+    transition: all 0.2s;
+    transform: scale(1);
+  }
 
-    &:active #Icon-Heart-2 {
-      visibility: visible;
-      transition: all 0.5s;
-      transform: scale(1);
-    }
+  //*******************************------------------------------------FOOTER----------------------------***********************//////////////
+
+  /////*******************************------------------------------------------Page restaurant------------------------************************////////////////
+  .fleche-retour {
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    width: 4%;
+  }
+
+  .fa-arrow-left {
+    color: black;
+  }
+  .size-Img-Entrée-plat-dessert {
+    height: 1500px;
+    width: 100%;
+    position: relative;
+  }
+  .box-image-des-pages-restaurant {
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+  }
+  .Img-pages-restaurant {
+    @include Position-Size-Image;
+    border-radius: 0%;
+  }
+
+  .Img-pages-restaurant-la-note-enchante {
+    @include Position-Size-Image;
+    border-radius: 0%;
+    object-position: center;
+  }
+
+  .Entree-plat-dessert {
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    background-color: white;
+    border-radius: 45px 45px 0px 0px;
+  }
+
+  .Titre-icone-pages-restaurant {
+    display: flex;
+    height: 10%;
+    font-size: 20px;
+  }
+
+  .Heart-page-restaurant {
+    @include Attribut-size-bouton;
+    left: 36%;
+    top: 35%;
+  }
+////////////////////////////*********************************------------------------------------BTN JAIME RESTAURANT--------------------------***************************////////////////
+.Heart-page-restaurant:active #Icon-Heart-2 {
+    visibility: visible;
+    transition: all 0.2s;
+    transform: scale(1);
   }
 }
