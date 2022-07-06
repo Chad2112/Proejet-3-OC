@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+
   @font-face {
     font-family: Roboto;
     src: url(./Font/Roboto-Regular.ttf);
@@ -329,6 +329,7 @@
     @include Attribut-size-bouton;
     left: 46%;
     top: 29%;
+    
   }
 
   #Icon-Heart {
@@ -349,7 +350,7 @@
     transform: scale(0);
   }
 
-  .Heart-acceuil:active #Icon-Heart-2 {
+  .Heart-acceuil:focus #Icon-Heart-2 {
     visibility: visible;
     transition: all 0.2s;
     transform: scale(1);
@@ -411,9 +412,10 @@
     top: 35%;
   }
 ////////////////////////////*********************************------------------------------------BTN JAIME RESTAURANT--------------------------***************************////////////////
-.Heart-page-restaurant:active #Icon-Heart-2 {
+.Heart-page-restaurant:focus #Icon-Heart-2 {
     visibility: visible;
     transition: all 0.2s;
     transform: scale(1);
   }
-}
+
+
