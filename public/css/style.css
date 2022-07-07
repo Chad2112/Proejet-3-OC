@@ -12,13 +12,6 @@
   src: url(./Font/Shrikhand-Regular.otf);
 }
 /*****--------------------------MIXIN-VARIABLES-------------------------------***************/
-.lien-Choose-restaurant,
-.lien-Composez-votre-menu,
-.lien-Degustez-au-restaurant, .Titre-Fonctionnement, .texte-explore, .Contain-location .info-location {
-  text-align: center;
-  color: black;
-}
-
 * {
   font-family: Roboto;
 }
@@ -37,10 +30,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.Titre-des-restaurant {
-  font-family: Shrikhand;
 }
 
 .contain-header {
@@ -74,6 +63,8 @@ a {
   font-weight: 500;
   margin-left: 10px;
   margin-right: 30px;
+  text-align: center;
+  color: black;
 }
 .Contain-location .bloc-icone {
   display: flex;
@@ -97,6 +88,8 @@ a {
 }
 
 .texte-explore {
+  text-align: center;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,6 +134,8 @@ a {
 }
 
 .Titre-Fonctionnement {
+  text-align: center;
+  color: black;
   font-size: 16px;
   font-weight: bolder;
   margin: 0% 0% 5% 5%;
@@ -156,14 +151,15 @@ a {
 }
 
 .btn-Fonctionnement {
-  height: 27%;
+  height: 25%;
   width: 87%;
   border-radius: 20px;
-  box-shadow: 0px 2px 21px 1px rgba(128, 128, 128, 0.425);
+  box-shadow: 0px 2px 21px 1px rgba(128, 128, 128, 0.43);
+  font-size: 19px;
+  height: 27%;
   background-color: rgba(128, 128, 128, 0.11);
   position: relative;
   font-weight: bolder;
-  font-size: 19px;
 }
 .btn-Fonctionnement:active {
   background-color: rgba(146, 86, 220, 0.1921568627);
@@ -186,6 +182,8 @@ a {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  text-align: center;
+  color: black;
 }
 
 .choise-number {
@@ -275,7 +273,7 @@ a {
 }
 
 .Nom-location-Restaurant {
-  width: 75%;
+  width: 69%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -332,6 +330,54 @@ a {
   transform: scale(1);
 }
 
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: rgb(56, 56, 56);
+}
+
+.all-footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin-left: 6%;
+  padding-top: 6%;
+  color: white;
+}
+
+.box-lien-footer {
+  width: 100%;
+}
+
+.titre-footer-ohmyfood {
+  font-family: Shrikhand;
+  font-size: 20px;
+  padding-bottom: 15%;
+}
+
+ul {
+  padding: 0%;
+  margin: 0%;
+  list-style-type: none;
+}
+ul li {
+  margin: 2% 0% 2% 0%;
+}
+ul li a {
+  color: white;
+  width: 100%;
+}
+
+.fa-utensils {
+  margin-right: 4%;
+}
+
+.fa-handshake-angle {
+  margin-right: 2.5%;
+}
+
 .fleche-retour {
   position: absolute;
   left: 5%;
@@ -375,6 +421,10 @@ a {
   object-position: center;
 }
 
+.Titre-des-restaurant {
+  font-family: Shrikhand;
+}
+
 .Entree-plat-dessert {
   height: 80%;
   width: 100%;
@@ -382,12 +432,18 @@ a {
   top: 20%;
   background-color: white;
   border-radius: 45px 45px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .Titre-icone-pages-restaurant {
   display: flex;
   height: 10%;
   font-size: 20px;
+  width: 100%;
+  margin-left: 10%;
 }
 
 .Heart-page-restaurant {
@@ -407,6 +463,128 @@ a {
   visibility: visible;
   transition: all 0.2s;
   transform: scale(1);
+}
+
+.Box-Titre-entrée {
+  text-transform: uppercase;
+  height: 10%;
+  width: 87%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 16px;
+}
+
+.titre-entree {
+  height: 87%;
+  border-bottom: #99e2d0 3px solid;
+  width: 11%;
+}
+
+.contain-btn-entrée {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+}
+
+.btn-entrée-plat-dessert {
+  height: 25%;
+  width: 87%;
+  border-radius: 20px;
+  box-shadow: 0px 2px 21px 1px rgba(128, 128, 128, 0.43);
+  font-size: 19px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.valide {
+  background-color: #99e2d0;
+  width: 22%;
+  height: 100%;
+  border-radius: 0px 20px 20px 0px;
+  transform: translateX(100%);
+  visibility: hidden;
+  display: none;
+}
+
+.btn-entrée-plat-dessert:focus .valide {
+  visibility: visible;
+  transition: all 4s;
+  transform: translateX(0);
+  display: inline-block;
+}
+
+.Nom-du-plat {
+  height: 75%;
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.commentaire-plat {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.prix-plat {
+  height: 75%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.contain-btn-plat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  margin-top: 10%;
+}
+
+.contain-btn-dessert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  margin-top: 10%;
+}
+
+.btn-commander {
+  height: 50px;
+  width: 68%;
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  border-radius: 30px;
+  box-shadow: 0px 2px 21px 1px rgba(128, 128, 128, 0.425);
+  margin: 9% 0px 15% 0px;
+  height: 53px;
+  width: 48%;
+}
+
+.lien-btn-commander {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
