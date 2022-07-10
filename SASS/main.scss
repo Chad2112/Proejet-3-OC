@@ -100,6 +100,15 @@ $Color-Tertiaire: #99e2d0;
   font-family: Roboto;
 }
 
+html,
+body {
+
+  width: 100%;
+  overflow-x: hidden;
+
+}
+
+
 h1,
 h2,
 h3,
@@ -178,12 +187,12 @@ a {
     margin-bottom: 10%;
   }
 }
-.btn-explore {
+.btn-principal {
   @include Size-border-color-btn-principal;
+}
 
-  .lien-Explore-restaurant {
-    @include lien-btn-principal-size-font;
-  }
+.lien-Explore-restaurant {
+  @include lien-btn-principal-size-font;
 }
 
 ///////////////////********************----------------------------FONCTIONNEMENT ET BTN----------------------************************/////////////////
@@ -208,14 +217,12 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-
   height: 100%;
   width: 100%;
 }
 .btn-Fonctionnement {
   @include size-border-btn;
   height: 27%;
-
   background-color: rgba(128, 128, 128, 0.11);
   position: relative;
   font-weight: bolder;
@@ -386,7 +393,7 @@ footer {
   box-sizing: border-box;
   margin-left: 6%;
   padding-top: 6%;
-  
+
   color: white;
 }
 
@@ -414,7 +421,7 @@ ul {
   }
 }
 
-.fa-utensils{
+.fa-utensils {
   margin-right: 4%;
 }
 .fa-handshake-angle {
@@ -448,9 +455,7 @@ ul {
   border-radius: 0%;
 }
 
-.Img-pages-restaurant-la-note-enchante {
-  @include Position-Size-Image;
-  border-radius: 0%;
+.Img-la-note-enchante {
   object-position: center;
 }
 
@@ -491,7 +496,7 @@ ul {
   transform: scale(1);
 }
 
-.Box-Titre-entrée {
+.Box-Titre-entrée-plat-desserts {
   text-transform: uppercase;
   height: 10%;
   width: 87%;
@@ -501,87 +506,133 @@ ul {
   margin-left: 16px;
 }
 
-.titre-entree {
+.titre-entree-plat-desserts {
   height: 87%;
   border-bottom: $Color-Tertiaire 3px solid;
   width: 11%;
 }
 
-.contain-btn-entrée {
+.contain-btn-restaurant {
   @include flex-between-column-aligncenter;
   width: 100%;
   height: 25%;
+  @keyframes transition {
+    0% {
+      margin-right: -210px;
+      opacity: 0;
+    }
+    100% {
+      margin-right: 0;
+      opacity: 1;
+    }
+  }
+  .btn-entree {
+    opacity: 0;
+    animation: transition 1s ease-in-out 2s forwards;
+    animation-delay: 1s;
+  }
+  .btn-plat {
+    opacity: 0;
+    animation: transition 1s ease-in-out 2s forwards;
+    animation-delay: 2s;
+  }
+  .btn-dessert {
+    opacity: 0;
+    animation: transition 1s ease-in-out 2s forwards;
+    animation-delay: 3s;
+  }
+}
+
+.Margin-btn-restaurant {
+  margin-top: 10%;
 }
 
 .btn-entrée-plat-dessert {
   @include size-border-btn;
   font-weight: bolder;
-  @include flex-center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0%;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
-    position: relative;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: all 450ms;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0px 0px 23px 10px rgb(128, 128, 128);
+  
+  }
+   &:focus .valide {
+    display: block;
+    
+  }
+
+  &:focus .fa-circle-check {
+    transform: rotate(0deg);
+    transition: transform 1s;
+  }
 }
+
+@keyframes slid {
+  0% {
+    margin-right: -70px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-right: 0%;
+    opacity: 1;
+  }
+  
+}
+
 
 .valide {
   background-color: $Color-Tertiaire;
-  width: 22%;
   height: 100%;
-  border-radius: 0px 20px 20px 0px;
-  transform: translateX(100%);
-  visibility: hidden;
   display: none;
+  width: 22%;
+  color: white;
+  animation: slid 500ms ease-in-out forwards;
+}
+
+.icon-check {
+  @include flex-center;
+  @include width-height-max;
 
 }
 
+.fa-circle-check {
+  font-size: 40px;
+  transform: rotate(-360deg);
 
-.btn-entrée-plat-dessert:focus .valide {
-  visibility: visible;
-  transition: all 4s;
-  transform: translateX(0);
-  display: inline-block;
 }
-
-
 
 .Nom-du-plat {
-  height: 75%;
-  width: 84%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  white-space: nowrap;
+  text-align: left;
+  padding-left: 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .commentaire-plat {
   font-size: 14px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .prix-plat {
-  height: 75%;
-  display: flex;
-  align-items: flex-end;
-}
+  margin-right: 1%;
+ }
 
-.contain-btn-plat {
-  @include flex-between-column-aligncenter;
-  width: 100%;
-  height: 25%;
-  margin-top: 10%;
-}
-
-.contain-btn-dessert {
-  @include flex-between-column-aligncenter;
-  width: 100%;
-  height: 25%;
-  margin-top: 10%;
-}
 
 .btn-commander {
-  @include Size-border-color-btn-principal;
   margin: 9% 0px 15% 0px;
   height: 53px;
   width: 48%;
@@ -590,4 +641,3 @@ ul {
 .lien-btn-commander {
   @include lien-btn-principal-size-font;
 }
-
