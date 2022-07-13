@@ -11,7 +11,6 @@
   font-family: Shrikhand;
   src: url(./Font/Shrikhand-Regular.otf);
 }
-/*****--------------------------MIXIN-VARIABLES-------------------------------***************/
 * {
   font-family: Roboto;
 }
@@ -49,22 +48,30 @@ a {
   box-shadow: 0px 1px 25px 1px rgba(0, 0, 0, 0.281);
   position: relative;
 }
-.contain-header .box-logo {
+.contain-header_box-logo {
   width: 45%;
 }
-.contain-header .logo-Header {
+.contain-header_logo-Header {
   width: 100%;
   height: 100%;
 }
 
 .Contain-location {
   width: 100%;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(128, 128, 128, 0.199);
 }
-.Contain-location .info-location {
+.Contain-location_bloc-icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7%;
+  height: 100%;
+}
+.Contain-location_info-location {
   font-size: 16px;
   font-weight: 500;
   margin-left: 10px;
@@ -72,19 +79,19 @@ a {
   text-align: center;
   color: black;
 }
-.Contain-location .bloc-icone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 7%;
-  height: 100%;
+.Contain-location_search {
+  text-decoration: none;
+  border: none;
+  background-color: rgba(128, 128, 128, 0);
+  padding-left: 15%;
+  margin: 0%;
 }
 
 .Explore-restaurant {
   height: 300px;
   width: 100%;
 }
-.Explore-restaurant .contain-explore {
+.Explore-restaurant_contain-explore {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -92,8 +99,7 @@ a {
   height: 100%;
   background-color: rgba(128, 128, 128, 0.137);
 }
-
-.texte-explore {
+.Explore-restaurant_texte_all {
   text-align: center;
   color: black;
   display: flex;
@@ -103,22 +109,23 @@ a {
   width: 75%;
   margin-top: 35px;
 }
-.texte-explore .Reservez-menu {
+.Explore-restaurant_texte_titre {
   margin: 0%;
 }
-.texte-explore .Decouvrez-restaurant {
+.Explore-restaurant_texte {
   margin-bottom: 10%;
 }
-
-.btn-principal {
+.Explore-restaurant_btn-principal {
   height: 50px;
   width: 68%;
   background-image: linear-gradient(to bottom, #ff79da, #9356dc);
   border-radius: 30px;
   box-shadow: 0px 2px 21px 1px rgba(128, 128, 128, 0.425);
 }
-
-.lien-Explore-restaurant {
+.Explore-restaurant_btn-principal:hover {
+  box-shadow: 0px 0px 23px 10px rgb(128, 128, 128);
+}
+.Explore-restaurant_lien-btn {
   width: 100%;
   height: 100%;
   display: flex;
@@ -139,8 +146,7 @@ a {
   margin-top: 6%;
   margin-bottom: 15%;
 }
-
-.Titre-Fonctionnement {
+.Fonctionnement-et-bouton_Titre {
   text-align: center;
   color: black;
   font-size: 16px;
@@ -148,7 +154,7 @@ a {
   margin: 0% 0% 5% 5%;
 }
 
-.contain-btn {
+.contain-3-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,8 +162,7 @@ a {
   height: 100%;
   width: 100%;
 }
-
-.btn-Fonctionnement {
+.contain-3-btn_btn-Fonctionnement {
   height: 25%;
   width: 87%;
   border-radius: 20px;
@@ -168,21 +173,19 @@ a {
   position: relative;
   font-weight: bolder;
 }
-.btn-Fonctionnement:active {
-  background-color: rgba(146, 86, 220, 0.1921568627);
-}
-
-.btn-Fonctionnement:active #icone {
+.contain-3-btn_btn-Fonctionnement_btn-Fonctionnement:active #icone {
   color: #9356dc;
 }
-
-#icone {
-  color: grey;
+.contain-3-btn_btn-Fonctionnement:active {
+  background-color: rgba(146, 86, 220, 0.1921568627);
 }
-
-.lien-Choose-restaurant,
-.lien-Composez-votre-menu,
-.lien-Degustez-au-restaurant {
+.contain-3-btn_btn-Fonctionnement:hover {
+  box-shadow: 0px 0px 23px 10px rgb(128, 128, 128);
+}
+.contain-3-btn_btn-Fonctionnement:active #icone {
+  color: #9356dc;
+}
+.contain-3-btn_lien-Choose, .contain-3-btn_lien-Compose, .contain-3-btn_lien-Degustez {
   width: 100%;
   height: 100%;
   display: flex;
@@ -192,8 +195,7 @@ a {
   text-align: center;
   color: black;
 }
-
-.choise-number {
+.contain-3-btn_box_number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,15 +208,14 @@ a {
   color: white;
   font-size: 15px;
 }
-
-.Contain-icone {
+.contain-3-btn_Contain-icone {
   width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: grey;
 }
-
-.choose-restaurant {
+.contain-3-btn_choose-restaurant {
   width: 75%;
   display: flex;
   justify-content: flex-start;
@@ -225,9 +226,8 @@ a {
   width: 100%;
   background-color: rgba(128, 128, 128, 0.116);
 }
-
-.Titre-Restaurant {
-  height: 10%;
+.all-Restaurant_Titre-Restaurant {
+  height: 7%;
   display: flex;
   align-items: center;
   margin-left: 5%;
@@ -240,11 +240,7 @@ a {
   align-items: center;
   justify-content: space-evenly;
 }
-
-.card1,
-.card2,
-.card3,
-.card4 {
+.all-Card_card1, .all-Card_card2, .all-Card_card3, .all-Card_card4 {
   height: 23%;
   width: 87%;
   background-color: white;
@@ -254,23 +250,14 @@ a {
 .box-Img {
   height: 73%;
 }
-
-.Titre-icone-restaurant {
-  height: 27%;
-  display: flex;
-}
-
-.Img-restaurant-1,
-.Img-restaurant-3,
-.Img-restaurant-4 {
+.box-Img_Img-restaurant {
   object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 15px 15px 0px 0px;
   object-position: center bottom;
 }
-
-.Img-restaurant-2 {
+.box-Img_Img-restaurant--modifier {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -279,7 +266,11 @@ a {
   object-position: 0px -165px;
 }
 
-.Nom-location-Restaurant {
+.Titre-et-icone-restaurant {
+  height: 27%;
+  display: flex;
+}
+.Titre-et-icone-restaurant_Nom-location-Restaurant {
   width: 69%;
   height: 100%;
   display: flex;
@@ -290,7 +281,7 @@ a {
   text-decoration: none;
   color: black;
 }
-.Nom-location-Restaurant .nom-restaurant {
+.Titre-et-icone-restaurant_nom-restaurant {
   padding-bottom: 1.5%;
 }
 
@@ -353,12 +344,10 @@ footer {
   padding-top: 6%;
   color: white;
 }
-
-.box-lien-footer {
+.all-footer .box-lien-footer {
   width: 100%;
 }
-
-.titre-footer-ohmyfood {
+.all-footer .titre-footer-ohmyfood {
   font-family: Shrikhand;
   font-size: 20px;
   padding-bottom: 15%;
@@ -457,7 +446,7 @@ ul li a {
   background: none;
   cursor: pointer;
   left: 36%;
-  top: 35%;
+  top: 27%;
 }
 
 .Heart-page-restaurant:focus #Icon-Heart-2 {
@@ -474,6 +463,28 @@ ul li a {
   align-items: flex-start;
   justify-content: flex-start;
   margin-left: 16px;
+}
+
+.Entree-plat-dessert_Titre-et-icone-restaurant {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.Nom-location-Restaurant {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Titre-des-restaurant_contain-Btn-love {
+  height: 100%;
+  width: 25%;
+  position: relative;
 }
 
 .titre-entree-plat-desserts {

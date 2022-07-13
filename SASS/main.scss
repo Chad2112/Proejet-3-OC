@@ -1,114 +1,15 @@
-@font-face {
-  font-family: Roboto;
-  src: url(./Font/Roboto-Regular.ttf);
-}
-@font-face {
-  font-family: Roboto-bold;
-  src: url(./Font/Roboto-Bold.ttf);
-}
-
-@font-face {
-  font-family: Shrikhand;
-  src: url(./Font/Shrikhand-Regular.otf);
-}
-
-/*****--------------------------MIXIN-VARIABLES-------------------------------***************/ /////
-
-@mixin width-height-max {
-  width: 100%;
-  height: 100%;
-}
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin Flex-start {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-@mixin flex-between-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-@mixin flex-between-column-aligncenter {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin Position-Size-Image {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px 15px 0px 0px;
-  object-position: center bottom;
-}
-
-@mixin Attribut-size-bouton {
-  position: absolute;
-  height: 25px;
-  width: 25px;
-  padding: 0%;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-}
-
-@mixin text-color-center {
-  text-align: center;
-  color: black;
-}
-
-@mixin size-border-btn {
-  height: 25%;
-  width: 87%;
-  border-radius: 20px;
-  box-shadow: 0px 2px 21px 1px rgb(128 128 128 / 43%);
-  font-size: 19px;
-}
-
-@mixin Size-border-color-btn-principal {
-  height: 50px;
-  width: 68%;
-  background-image: linear-gradient(to bottom, $Color-secondary, $Color-primary);
-  border-radius: 30px;
-  box-shadow: 0px 2px 21px 1px rgba(128, 128, 128, 0.425);
-}
-
-@mixin lien-btn-principal-size-font {
-  @include width-height-max;
-  @include flex-center;
-  text-decoration: none;
-  font-size: 17px;
-  color: white;
-}
-
-$Color-primary: #9356dc;
-$Color-secondary: #ff79da;
-$Color-Tertiaire: #99e2d0;
-
+@import "./Utils/font.scss";
+@import "./Utils/variables";
+@import "./Utils/mixin";
 //***********-----------------------CSS GENERALES******************//////////////
 * {
   font-family: Roboto;
 }
-
 html,
 body {
-
   width: 100%;
   overflow-x: hidden;
-
 }
-
-
 h1,
 h2,
 h3,
@@ -116,7 +17,6 @@ h4 {
   font-family: Roboto-Bold;
   margin: 0%;
 }
-
 body {
   margin: 0%;
 }
@@ -133,29 +33,42 @@ a {
   padding-bottom: 1%;
   box-shadow: 0px 1px 25px 1px rgba(0, 0, 0, 0.281);
   position: relative;
-  .box-logo {
+
+  &_box-logo {
     width: 45%;
   }
-  .logo-Header {
+
+  &_logo-Header {
     @include width-height-max;
   }
 }
+
 .Contain-location {
   width: 100%;
+  height: 50px;
   @include flex-center;
   background-color: rgba(128, 128, 128, 0.199);
 
-  .info-location {
+  &_bloc-icone {
+    @include flex-center;
+    width: 7%;
+    height: 100%;
+  }
+
+  &_info-location {
     font-size: 16px;
     font-weight: 500;
     margin-left: 10px;
     margin-right: 30px;
     @include text-color-center;
   }
-  .bloc-icone {
-    @include flex-center;
-    width: 7%;
-    height: 100%;
+
+  &_search {
+    text-decoration: none;
+    border: none;
+    background-color: rgba(128, 128, 128, 0);
+    padding-left: 15%;
+    margin: 0%;
   }
 }
 
@@ -165,34 +78,39 @@ a {
   height: 300px;
   width: 100%;
 
-  .contain-explore {
+  &_contain-explore {
     @include Flex-start;
     @include width-height-max;
     background-color: rgba(128, 128, 128, 0.137);
   }
-}
 
-.texte-explore {
-  @include text-color-center;
-  @include flex-center;
-  flex-direction: column;
-  width: 75%;
-  margin-top: 35px;
+  &_texte_all {
+    @include text-color-center;
+    @include flex-center;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 35px;
+  }
 
-  .Reservez-menu {
+  &_texte_titre {
     margin: 0%;
   }
 
-  .Decouvrez-restaurant {
+  &_texte {
     margin-bottom: 10%;
   }
-}
-.btn-principal {
-  @include Size-border-color-btn-principal;
-}
 
-.lien-Explore-restaurant {
-  @include lien-btn-principal-size-font;
+  &_btn-principal {
+    @include Size-border-color-btn-principal;
+
+    &:hover {
+      box-shadow: 0px 0px 23px 10px rgb(128, 128, 128);
+    }
+  }
+
+  &_lien-btn {
+    @include lien-btn-principal-size-font;
+  }
 }
 
 ///////////////////********************----------------------------FONCTIONNEMENT ET BTN----------------------************************/////////////////
@@ -203,73 +121,78 @@ a {
   width: 100%;
   margin-top: 6%;
   margin-bottom: 15%;
+
+  &_Titre {
+    @include text-color-center;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 0% 0% 5% 5%;
+  }
 }
 
-.Titre-Fonctionnement {
-  @include text-color-center;
-  font-size: 16px;
-  font-weight: bolder;
-  margin: 0% 0% 5% 5%;
-}
-
-.contain-btn {
+.contain-3-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   height: 100%;
   width: 100%;
-}
-.btn-Fonctionnement {
-  @include size-border-btn;
-  height: 27%;
-  background-color: rgba(128, 128, 128, 0.11);
-  position: relative;
-  font-weight: bolder;
 
-  &:active {
-    background-color: #9256dc31;
+  &_btn-Fonctionnement {
+    @include size-border-btn;
+    height: 27%;
+    background-color: rgba(128, 128, 128, 0.11);
+    position: relative;
+    font-weight: bolder;
+
+    &_btn-Fonctionnement:active #icone {
+      color: #9356dc;
+    }
+
+    &:active {
+      background-color: #9256dc31;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 23px 10px rgb(128, 128, 128);
+    }
+
+    &:active #icone {
+      color: #9356dc;
+    }
   }
-}
 
-.btn-Fonctionnement:active #icone {
-  color: #9356dc;
-}
+  &_lien-Choose,
+  &_lien-Compose,
+  &_lien-Degustez {
+    @include width-height-max;
+    @include flex-center;
+    text-decoration: none;
+    @include text-color-center;
+  }
 
-#icone {
-  color: grey;
-}
+  &_box_number {
+    @include flex-center;
+    position: absolute;
+    left: -4%;
+    height: 36%;
+    width: 8%;
+    background-color: $Color-primary;
+    border-radius: 50%;
+    color: white;
+    font-size: 15px;
+  }
+  &_Contain-icone {
+    width: 25%;
+    @include flex-center;
+    color: grey;
+  }
 
-.lien-Choose-restaurant,
-.lien-Composez-votre-menu,
-.lien-Degustez-au-restaurant {
-  @include width-height-max;
-  @include flex-center;
-  text-decoration: none;
-  @include text-color-center;
-}
-
-.choise-number {
-  @include flex-center;
-  position: absolute;
-  left: -4%;
-  height: 36%;
-  width: 8%;
-  background-color: $Color-primary;
-  border-radius: 50%;
-  color: white;
-  font-size: 15px;
-}
-
-.Contain-icone {
-  width: 25%;
-  @include flex-center;
-}
-
-.choose-restaurant {
-  width: 75%;
-  display: flex;
-  justify-content: flex-start;
+  &_choose-restaurant {
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 //****************************-----------------------------RESTAURANTS-------------------------*********************************//
@@ -278,13 +201,13 @@ a {
   height: 1200px;
   width: 100%;
   background-color: rgba(128, 128, 128, 0.116);
-}
 
-.Titre-Restaurant {
-  height: 10%;
-  display: flex;
-  align-items: center;
-  margin-left: 5%;
+  &_Titre-Restaurant {
+    height: 7%;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+  }
 }
 
 .all-Card {
@@ -293,61 +216,58 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-}
 
-.card1,
-.card2,
-.card3,
-.card4 {
-  height: 23%;
-  width: 87%;
-  background-color: white;
-  border-radius: 15px;
+  &_card1,
+  &_card2,
+  &_card3,
+  &_card4 {
+    height: 23%;
+    width: 87%;
+    background-color: white;
+    border-radius: 15px;
+  }
 }
 
 .box-Img {
   height: 73%;
+
+  &_Img-restaurant {
+    @include Position-Size-Image;
+  }
+
+  &_Img-restaurant--modifier {
+    @include Position-Size-Image;
+    object-position: 0px -165px;
+  }
 }
 
-.Titre-icone-restaurant {
+.Titre-et-icone-restaurant {
   height: 27%;
   display: flex;
-}
 
-.Img-restaurant-1,
-.Img-restaurant-3,
-.Img-restaurant-4 {
-  @include Position-Size-Image;
-}
-
-.Img-restaurant-2 {
-  @include Position-Size-Image;
-  object-position: 0px -165px;
-}
-
-.Nom-location-Restaurant {
-  width: 69%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 4%;
-  text-decoration: none;
-  color: black;
-
-  .nom-restaurant {
+  &_Nom-location-Restaurant {
+    width: 69%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 4%;
+    text-decoration: none;
+    color: black;
+  }
+  &_nom-restaurant {
     padding-bottom: 1.5%;
   }
 }
 
-/***********************************************************BTN j'aime*****************************/ //////////////////////////
+/***********************************************************BTN j'aime*****************************/
+//////////////////////////
 
 .contain-Btn-love {
   width: 25%;
   position: relative;
 }
-
 .Heart-acceuil {
   @include Attribut-size-bouton;
   left: 46%;
@@ -395,15 +315,17 @@ footer {
   padding-top: 6%;
 
   color: white;
-}
+
 
 .box-lien-footer {
   width: 100%;
 }
+
 .titre-footer-ohmyfood {
   font-family: Shrikhand;
   font-size: 20px;
   padding-bottom: 15%;
+}
 }
 
 ul {
@@ -424,6 +346,7 @@ ul {
 .fa-utensils {
   margin-right: 4%;
 }
+
 .fa-handshake-angle {
   margin-right: 2.5%;
 }
@@ -439,17 +362,20 @@ ul {
 .fa-arrow-left {
   color: black;
 }
+
 .size-Img-Entrée-plat-dessert {
   height: 1500px;
   width: 100%;
   position: relative;
 }
+
 .box-image-des-pages-restaurant {
   height: 25%;
   width: 100%;
   position: absolute;
   top: 0%;
 }
+
 .Img-pages-restaurant {
   @include Position-Size-Image;
   border-radius: 0%;
@@ -487,8 +413,9 @@ ul {
 .Heart-page-restaurant {
   @include Attribut-size-bouton;
   left: 36%;
-  top: 35%;
+  top: 27%;
 }
+
 ////////////////////////////*********************************------------------------------------BTN JAIME RESTAURANT--------------------------***************************////////////////
 .Heart-page-restaurant:focus #Icon-Heart-2 {
   visibility: visible;
@@ -506,6 +433,26 @@ ul {
   margin-left: 16px;
 }
 
+.Entree-plat-dessert_Titre-et-icone-restaurant {
+  width: 100%;
+  height: 5%;
+  @include flex-center;
+  margin-top: 5%;
+}
+
+.Nom-location-Restaurant {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Titre-des-restaurant_contain-Btn-love {
+  height: 100%;
+  width: 25%;
+  position: relative;
+}
+
 .titre-entree-plat-desserts {
   height: 87%;
   border-bottom: $Color-Tertiaire 3px solid;
@@ -516,26 +463,31 @@ ul {
   @include flex-between-column-aligncenter;
   width: 100%;
   height: 25%;
+
   @keyframes transition {
     0% {
       margin-right: -210px;
       opacity: 0;
     }
+
     100% {
       margin-right: 0;
       opacity: 1;
     }
   }
+
   .btn-entree {
     opacity: 0;
     animation: transition 1s ease-in-out 2s forwards;
     animation-delay: 1s;
   }
+
   .btn-plat {
     opacity: 0;
     animation: transition 1s ease-in-out 2s forwards;
     animation-delay: 2s;
   }
+
   .btn-dessert {
     opacity: 0;
     animation: transition 1s ease-in-out 2s forwards;
@@ -564,11 +516,10 @@ ul {
 
   &:hover {
     box-shadow: 0px 0px 23px 10px rgb(128, 128, 128);
-  
   }
-   &:focus .valide {
+
+  &:focus .valide {
     display: block;
-    
   }
 
   &:focus .fa-circle-check {
@@ -587,9 +538,7 @@ ul {
     margin-right: 0%;
     opacity: 1;
   }
-  
 }
-
 
 .valide {
   background-color: $Color-Tertiaire;
@@ -603,13 +552,11 @@ ul {
 .icon-check {
   @include flex-center;
   @include width-height-max;
-
 }
 
 .fa-circle-check {
   font-size: 40px;
   transform: rotate(-360deg);
-
 }
 
 .Nom-du-plat {
@@ -629,8 +576,7 @@ ul {
 
 .prix-plat {
   margin-right: 1%;
- }
-
+}
 
 .btn-commander {
   margin: 9% 0px 15% 0px;

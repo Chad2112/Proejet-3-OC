@@ -1,0 +1,158 @@
+.contain-header {
+    background-color: rgba(128, 128, 128, 0.192)
+}
+
+.contain-btn-restaurant {
+    height: 65%;
+}
+
+.Titre-icone-pages-restaurant {
+    margin: 0%;
+    position: absolute;
+    top: 5%;
+    width: 37%;
+    left: 35%;
+}
+
+.Heart-page-restaurant {
+    top: 0%;
+}
+
+.contain-header {
+    padding-top: 2%;
+}
+
+.contain-header_box-logo {
+    width: 20%;
+}
+
+.contain-3-btn {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75%;
+}
+
+.contain-3-btn_btn-Fonctionnement {
+    width: 27%;
+    height: 44%;
+}
+
+.Fonctionnement-et-bouton_Titre {
+    margin: 0%;
+    justify-content: center;
+    width: 100%;
+    font-size: 30px;
+}
+
+.Explore-restaurant_texte_all {
+    width: 30%;
+}
+
+.Fonctionnement-et-bouton {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    height: 270px;
+    align-items: center;
+}
+
+.all-Restaurant_Titre-Restaurant {
+    height: 9%;
+    justify-content: center;
+    margin: 0%;
+    font-size: 35px;
+}
+
+.all-Card {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.all-Card_card1,
+.all-Card_card2,
+.all-Card_card3,
+.all-Card_card4 {
+    width: 34%;
+    height: 44%;
+}
+
+.box-Img_Img-restaurant {
+    object-position: center;
+}
+
+
+.all-Restaurant {
+    height: 850px;
+}
+
+.btn-commander {
+    position: absolute;
+    bottom: 3%;
+    width: 18%;
+}
+
+
+
+
+
+.Entree-plat-dessert {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 41%;
+    height: 59%;
+    width: 80%;
+    left: 10%;
+
+
+}
+
+.Entree-plat-dessert_Titre-et-icone-restaurant {
+    margin-top: 4%;
+    position: absolute;
+    top: 0%;
+    left: 7%;
+}
+
+
+.box-image-des-pages-restaurant {
+    height: 100%;
+}
+
+
+.size-Img-Entrée-plat-dessert {
+    height: 1000px;
+    background-color: rgba(128, 128, 128, 0.253)
+}
+
+.Margin-btn-restaurant {
+    margin: 0%;
+}
+
+.btn-commander {
+    margin: 0%;
+}
+
+footer {
+    height: 100%;
+}
+
+.all-footer {
+    flex-direction: column;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin: 0%;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul li {
+    margin: 2% 0% 2% 0%;
+    width: 25%;
+    text-align: center;
+}
