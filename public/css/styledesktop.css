@@ -116,7 +116,21 @@
 
 
 .box-image-des-pages-restaurant {
-    height: 100%;
+    height: 55%;
+    overflow: hidden;
+}
+
+.Img-a-la-francaise {
+    height: 135%;
+}
+
+.Img-la-palette-du-gout {
+    height: 135%;
+
+}
+
+.Img-le-delice-des-sens {
+    height: 125%;
 }
 
 

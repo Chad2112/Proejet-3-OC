@@ -1,7 +1,9 @@
 @import "./Utils/font.scss";
 @import "./Utils/variables";
 @import "./Utils/mixin";
+@import "./Utils/keyframe";
 //***********-----------------------CSS GENERALES******************//////////////
+
 * {
   font-family: Roboto;
 }
@@ -9,6 +11,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  z-index: 2;
 }
 h1,
 h2,
@@ -51,7 +54,6 @@ a {
 
   &_bloc-icone {
     @include flex-center;
-    width: 7%;
     height: 100%;
   }
 
@@ -71,6 +73,7 @@ a {
     margin: 0%;
   }
 }
+
 
 /////**********************************---------------------------CITATION ET BTN EXPLORE--------------------***************/////////////////////
 
@@ -104,7 +107,8 @@ a {
     @include Size-border-color-btn-principal;
 
     &:hover {
-      box-shadow: 0px 0px 23px 10px rgb(128, 128, 128);
+      box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
+      background-image: linear-gradient(to bottom, #fc96df, #a071da) ;
     }
   }
 
@@ -154,7 +158,7 @@ a {
     }
 
     &:hover {
-      box-shadow: 0px 0px 23px 10px rgb(128, 128, 128);
+      box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
     }
 
     &:active #icone {
@@ -225,6 +229,10 @@ a {
     width: 87%;
     background-color: white;
     border-radius: 15px;
+
+    &:hover {
+      box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
+    }
   }
 }
 
@@ -261,8 +269,7 @@ a {
   }
 }
 
-/***********************************************************BTN j'aime*****************************/
-//////////////////////////
+/***********************************************************BTN j'aime*****************************/ //////////////////////////
 
 .contain-Btn-love {
   width: 25%;
@@ -277,7 +284,8 @@ a {
 #Icon-Heart {
   position: absolute;
   font-size: 25px;
-  color: #9356dc;
+  color: $Color-primary;
+  top: 0%;
   top: 0%;
   left: 0%;
 }
@@ -285,14 +293,14 @@ a {
 #Icon-Heart-2 {
   position: absolute;
   font-size: 25px;
-  color: #9356dc;
+  color: $Color-primary;
   top: 0%;
   left: 0%;
   visibility: hidden;
   transform: scale(0);
 }
 
-.Heart-acceuil:focus #Icon-Heart-2 {
+.Heart-acceuil:hover #Icon-Heart-2 {
   visibility: visible;
   transition: all 0.2s;
   transform: scale(1);
@@ -316,16 +324,15 @@ footer {
 
   color: white;
 
+  .box-lien-footer {
+    width: 100%;
+  }
 
-.box-lien-footer {
-  width: 100%;
-}
-
-.titre-footer-ohmyfood {
-  font-family: Shrikhand;
-  font-size: 20px;
-  padding-bottom: 15%;
-}
+  .titre-footer-ohmyfood {
+    font-family: Shrikhand;
+    font-size: 20px;
+    padding-bottom: 15%;
+  }
 }
 
 ul {
@@ -415,13 +422,13 @@ ul {
   left: 36%;
   top: 27%;
 }
-
-////////////////////////////*********************************------------------------------------BTN JAIME RESTAURANT--------------------------***************************////////////////
 .Heart-page-restaurant:focus #Icon-Heart-2 {
   visibility: visible;
   transition: all 0.2s;
   transform: scale(1);
 }
+
+////////////////////////////*********************************------------------------------------BTN RESTAURANT--------------------------***************************////////////////
 
 .Box-Titre-entrée-plat-desserts {
   text-transform: uppercase;
@@ -464,18 +471,6 @@ ul {
   width: 100%;
   height: 25%;
 
-  @keyframes transition {
-    0% {
-      margin-right: -210px;
-      opacity: 0;
-    }
-
-    100% {
-      margin-right: 0;
-      opacity: 1;
-    }
-  }
-
   .btn-entree {
     opacity: 0;
     animation: transition 1s ease-in-out 2s forwards;
@@ -485,13 +480,13 @@ ul {
   .btn-plat {
     opacity: 0;
     animation: transition 1s ease-in-out 2s forwards;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
   }
 
   .btn-dessert {
     opacity: 0;
     animation: transition 1s ease-in-out 2s forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
   }
 }
 
@@ -511,47 +506,55 @@ ul {
   background: none;
   cursor: pointer;
   transition: all 450ms;
-  position: relative;
   overflow: hidden;
 
   &:hover {
-    box-shadow: 0px 0px 23px 10px rgb(128, 128, 128);
+    box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
   }
 
-  &:focus .valide {
+  &:focus &_valide {
     display: block;
   }
 
-  &:focus .fa-circle-check {
+  &:focus &_fa-circle-check {
     transform: rotate(0deg);
     transition: transform 1s;
   }
-}
 
-@keyframes slid {
-  0% {
-    margin-right: -70px;
-    opacity: 0;
+
+  &_valide {
+    background-color: $Color-Tertiaire;
+    height: 100%;
+    display: none;
+    width: 22%;
+    color: white;
+    animation: slid 500ms ease-in-out forwards;
   }
 
-  100% {
-    margin-right: 0%;
-    opacity: 1;
+  &_icon-check {
+    @include flex-center;
+    @include width-height-max;
   }
-}
 
-.valide {
-  background-color: $Color-Tertiaire;
-  height: 100%;
-  display: none;
-  width: 22%;
-  color: white;
-  animation: slid 500ms ease-in-out forwards;
-}
+  &_Nom-du-plat {
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-.icon-check {
-  @include flex-center;
-  @include width-height-max;
+  &_commentaire-plat {
+    font-size: 14px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &_prix-plat {
+    margin-right: 1%;
+
+  }
 }
 
 .fa-circle-check {
@@ -559,31 +562,36 @@ ul {
   transform: rotate(-360deg);
 }
 
-.Nom-du-plat {
-  white-space: nowrap;
-  text-align: left;
-  padding-left: 5%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.commentaire-plat {
-  font-size: 14px;
-  font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.prix-plat {
-  margin-right: 1%;
-}
-
 .btn-commander {
-  margin: 9% 0px 15% 0px;
-  height: 53px;
-  width: 48%;
+  @include Size-border-color-btn-principal;
+
+  &:hover {
+    box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
+    background-image: linear-gradient(to bottom, #fc96df, #a071da);
+  }
 }
 
 .lien-btn-commander {
   @include lien-btn-principal-size-font;
+}
+
+.loader-container {
+  animation: 2s opa;
+  height: 100%;
+  width: 100%;
+}
+
+.spin {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  border: solid 5px;
+  border-radius: 50%;
+  border-bottom-color: $Color-Tertiaire;
+  border-top-color: $Color-primary;
+  border-left-color: $Color-secondary;
+  border-right-color: white;
+  animation: 2s linear forwards spinner;
+  top: 50%;
+  left: 50%;
 }
