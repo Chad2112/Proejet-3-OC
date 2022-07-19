@@ -11,7 +11,7 @@
 
 }
 html,
-.body-acceuil {
+body {
   width: 100%;
   overflow-x: hidden;
 
@@ -255,7 +255,7 @@ a {
   transform: scale(0);
 }
 
-.Heart-acceuil:hover, .Heart-page-restaurant:hover .Icon-Heart-2 {
+.Heart-acceuil:hover .Icon-Heart-2, .Heart-page-restaurant:hover .Icon-Heart-2 {
   visibility: visible;
   transition: all 0.2s;
   transform: scale(1);
