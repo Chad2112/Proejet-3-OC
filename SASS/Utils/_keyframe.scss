@@ -1,52 +1,46 @@
-
 @keyframes slid {
-    0% {
-      margin-right: -70px;
-      opacity: 0;
-    }
-  
-    100% {
-      margin-right: 0%;
-      opacity: 1;
-    }
+  0% {
+    margin-right: -70px;
+    opacity: 0;
   }
 
-  
+  100% {
+    margin-right: 0%;
+    opacity: 1;
+  }
+}
 
-  @keyframes transition {
-    0% {
-      margin-right: -210px;
-      opacity: 0;
-    }
-
-    100% {
-      margin-right: 0;
-      opacity: 1;
-    }
+@keyframes transition {
+  0% {
+    margin-right: -210px;
+    opacity: 0;
   }
 
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
 
-  
 @keyframes spinner {
   0% {
     transform: translate3d(-50%, -50%, 0) rotate(0deg);
     opacity: 100%;
-    
   }
   100% {
     transform: translate3d(-50%, -50%, 0) rotate(360deg);
     opacity: 0%;
-    
   }
 }
 @keyframes blur {
-  0% {  filter: blur(4px);
-    
+  0% {
+    filter: blur(4px);
   }
 
-  99% { filter: blur(4px);}
+  99% {
+    filter: blur(4px);
+  }
   100% {
     filter: blur(0);
-    
   }
 }

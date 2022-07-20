@@ -2,5 +2,6 @@ $Color-primary: #9356dc;
 $Color-secondary: #ff79da;
 $Color-Tertiaire: #99e2d0;
 $Color-btn: linear-gradient(to bottom, $Color-secondary, $Color-primary);
-$light-color-primary: lighten(#9356dc,10%);
-$light-color-secondary: lighten(#ff79da,10%)
+$light-color-primary: lighten(#9356dc, 10%);
+$light-color-secondary: lighten(#ff79da, 10%);
+$darken-color-Tertiaire: darken(#99e2d0, 40%);
