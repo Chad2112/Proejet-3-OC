@@ -1,15 +1,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: Roboto;
-  src: url(./Font/Roboto-Regular.ttf);
+  src: url("/asset/Font/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: Roboto-bold;
-  src: url(./Font/Roboto-Bold.ttf);
+  src: url("/asset/Font/Roboto-Bold.ttf");
 }
 @font-face {
   font-family: Shrikhand;
-  src: url(./Font/Shrikhand-Regular.otf);
+  src: url("/asset/Font/Shrikhand-Regular.otf");
 }
 @keyframes slid {
   0% {
@@ -52,7 +52,7 @@
     filter: blur(0);
   }
 }
-.contain-header {
+.header {
   width: 100%;
   height: 45px;
   display: flex;
@@ -63,15 +63,15 @@
   box-shadow: 0px 1px 25px 1px rgba(0, 0, 0, 0.281);
   position: relative;
 }
-.contain-header_box-logo {
+.header__box-logo {
   width: 45%;
 }
-.contain-header_logo-Header {
+.header__logo {
   width: 100%;
   height: 100%;
 }
 
-.Contain-location {
+.location {
   width: 100%;
   height: 50px;
   display: flex;
@@ -79,13 +79,13 @@
   align-items: center;
   background-color: rgba(128, 128, 128, 0.199);
 }
-.Contain-location_bloc-icone {
+.location__bloc-icone {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-.Contain-location_info-location {
+.location__icone {
   font-size: 16px;
   font-weight: 500;
   margin-left: 10px;
@@ -93,12 +93,41 @@
   text-align: center;
   color: black;
 }
-.Contain-location_search {
+.location__search {
   text-decoration: none;
   border: none;
   background-color: rgba(128, 128, 128, 0);
   padding-left: 15%;
   margin: 0%;
+}
+
+.Explore {
+  height: 300px;
+  width: 100%;
+}
+.Explore__contain {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.137);
+}
+.Explore__box-txt {
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 75%;
+  margin-top: 35px;
+}
+.Explore__txt {
+  margin: 0%;
+}
+.Explore__citation {
+  margin-bottom: 10%;
 }
 
 footer {
@@ -173,46 +202,19 @@ a {
   text-decoration: none;
 }
 
-.Explore-restaurant {
-  height: 300px;
-  width: 100%;
-}
-.Explore-restaurant_contain-explore {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 128, 128, 0.137);
-}
-.Explore-restaurant_texte_all {
-  text-align: center;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 75%;
-  margin-top: 35px;
-}
-.Explore-restaurant_texte_titre {
-  margin: 0%;
-}
-.Explore-restaurant_texte {
-  margin-bottom: 10%;
-}
-.Explore-restaurant_btn-principal {
+.Explore__btn {
   height: 50px;
   width: 68%;
   background: linear-gradient(to bottom, #ff79da, #9356dc);
   border-radius: 30px;
   box-shadow: 0px 2px 21px 1px rgba(128, 128, 128, 0.425);
 }
-.Explore-restaurant_btn-principal:hover {
+.Explore__btn:hover {
   box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
   background-image: linear-gradient(to bottom, #fface8, #ae80e5);
 }
-.Explore-restaurant_lien-btn {
+
+.Explore__lien {
   width: 100%;
   height: 100%;
   display: flex;
@@ -223,7 +225,7 @@ a {
   color: white;
 }
 
-.Fonctionnement-et-bouton {
+.Fonctionnement {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -233,15 +235,14 @@ a {
   margin-top: 6%;
   margin-bottom: 15%;
 }
-.Fonctionnement-et-bouton_Titre {
+.Fonctionnement__Titre {
   text-align: center;
   color: black;
   font-size: 16px;
   font-weight: bolder;
   margin: 0% 0% 5% 5%;
 }
-
-.contain-3-btn {
+.Fonctionnement__contain {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -249,7 +250,7 @@ a {
   height: 100%;
   width: 100%;
 }
-.contain-3-btn_btn-Fonctionnement {
+.Fonctionnement__btn {
   height: 25%;
   width: 87%;
   border-radius: 20px;
@@ -260,19 +261,19 @@ a {
   position: relative;
   font-weight: bolder;
 }
-.contain-3-btn_btn-Fonctionnement_btn-Fonctionnement:active #icone {
+.Fonctionnement__btn__btn:active #icone {
   color: #9356dc;
 }
-.contain-3-btn_btn-Fonctionnement:active {
+.Fonctionnement__btn:active {
   background-color: rgba(146, 86, 220, 0.1921568627);
 }
-.contain-3-btn_btn-Fonctionnement:hover {
+.Fonctionnement__btn:hover {
   box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
 }
-.contain-3-btn_btn-Fonctionnement:active .fa-solid {
+.Fonctionnement__btn:active .fa-solid {
   color: #9356dc;
 }
-.contain-3-btn_lien-Choose, .contain-3-btn_lien-Compose, .contain-3-btn_lien-Degustez {
+.Fonctionnement__lien {
   width: 100%;
   height: 100%;
   display: flex;
@@ -282,7 +283,7 @@ a {
   text-align: center;
   color: black;
 }
-.contain-3-btn_box_number {
+.Fonctionnement__box_number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -295,261 +296,17 @@ a {
   color: white;
   font-size: 15px;
 }
-.contain-3-btn_Contain-icone {
+.Fonctionnement__icone {
   width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: grey;
 }
-.contain-3-btn_choose-restaurant {
+.Fonctionnement__texte {
   width: 75%;
   display: flex;
   justify-content: flex-start;
-}
-
-.all-Restaurant {
-  height: 1200px;
-  width: 100%;
-  background-color: rgba(128, 128, 128, 0.116);
-}
-.all-Restaurant_Titre-Restaurant {
-  height: 7%;
-  display: flex;
-  align-items: center;
-  margin-left: 5%;
-}
-
-.all-Card {
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.all-Card_card1, .all-Card_card2, .all-Card_card3, .all-Card_card4 {
-  height: 23%;
-  width: 87%;
-  background-color: white;
-  border-radius: 15px;
-}
-.all-Card_card1:hover, .all-Card_card2:hover, .all-Card_card3:hover, .all-Card_card4:hover {
-  box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
-}
-
-.box-Img {
-  height: 73%;
-  position: relative;
-}
-.box-Img_Img-restaurant {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px 15px 0px 0px;
-  object-position: center bottom;
-}
-
-.Img-restaurant--modifier {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px 15px 0px 0px;
-  object-position: center bottom;
-  object-position: 0% -125px;
-}
-
-.new {
-  height: 26px;
-  width: 73px;
-  position: absolute;
-  top: 10%;
-  right: 4%;
-  background-color: #99e2d0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(1);
-}
-
-.new:hover {
-  transform: scale(1.3);
-  transition: transform 0.5s ease-in-out;
-}
-
-.text-new {
-  margin: 0%;
-  font-size: 12px;
-  color: #278870;
-  font-weight: bolder;
-}
-
-.Titre-et-icone-restaurant {
-  height: 27%;
-  display: flex;
-}
-.Titre-et-icone-restaurant_Nom-location-Restaurant {
-  width: 69%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 4%;
-  text-decoration: none;
-  color: black;
-}
-.Titre-et-icone-restaurant_nom-restaurant {
-  padding-bottom: 1.5%;
-}
-
-/***********************************************************BTN j'aime*****************************/
-.contain-Btn-love {
-  width: 25%;
-  position: relative;
-}
-
-.Heart-acceuil {
-  position: absolute;
-  height: 25px;
-  width: 25px;
-  padding: 0%;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-  left: 46%;
-  top: 29%;
-}
-
-.Icon-Heart {
-  position: absolute;
-  font-size: 25px;
-  color: #9356dc;
-  top: 0%;
-  top: 0%;
-  left: 0%;
-}
-
-.Icon-Heart-2 {
-  position: absolute;
-  font-size: 25px;
-  color: #9356dc;
-  top: 0%;
-  left: 0%;
-  visibility: hidden;
-  transform: scale(0);
-}
-
-.Heart-acceuil:hover .Icon-Heart-2,
-.Heart-page-restaurant:hover .Icon-Heart-2 {
-  visibility: visible;
-  transition: all 0.2s;
-  transform: scale(1);
-}
-
-.fleche-retour {
-  position: absolute;
-  left: 5%;
-  top: 45%;
-  width: 4%;
-}
-
-.fa-arrow-left {
-  color: black;
-}
-
-.size-Img-Entrée-plat-dessert {
-  height: 1500px;
-  width: 100%;
-  position: relative;
-}
-
-.box-image-des-pages-restaurant {
-  height: 25%;
-  width: 100%;
-  position: absolute;
-  top: 0%;
-}
-
-.Img-pages-restaurant {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px 15px 0px 0px;
-  object-position: center bottom;
-  border-radius: 0%;
-}
-
-.Img-la-note-enchante {
-  object-position: center;
-}
-
-.Titre-des-restaurant {
-  font-family: Shrikhand;
-}
-
-.Entree-plat-dessert {
-  height: 80%;
-  width: 100%;
-  position: absolute;
-  top: 20%;
-  background-color: white;
-  border-radius: 45px 45px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.Entree-plat-dessert_Titre-icone-pages-restaurant {
-  display: flex;
-  height: 10%;
-  font-size: 20px;
-  width: 100%;
-  margin-left: 10%;
-}
-
-.Heart-page-restaurant {
-  position: absolute;
-  height: 25px;
-  width: 25px;
-  padding: 0%;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-  left: 36%;
-  top: 27%;
-}
-
-.Box-Titre-entrée-plat-desserts {
-  text-transform: uppercase;
-  height: 10%;
-  width: 87%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-left: 16px;
-}
-
-.Entree-plat-dessert_Titre-et-icone-restaurant {
-  width: 100%;
-  height: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5%;
-}
-
-.Titre-des-restaurant_contain-Btn-love {
-  height: 100%;
-  width: 25%;
-  position: relative;
-}
-
-.titre-entree-plat-desserts {
-  height: 87%;
-  border-bottom: #99e2d0 3px solid;
-  width: 11%;
 }
 
 .contain-btn-restaurant {
@@ -663,6 +420,243 @@ a {
   text-decoration: none;
   font-size: 17px;
   color: white;
+}
+
+.contain-Btn-love {
+  width: 25%;
+  position: relative;
+}
+
+.Heart-acceuil {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  padding: 0%;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  left: 46%;
+  top: 29%;
+}
+
+.Icon-Heart {
+  position: absolute;
+  font-size: 25px;
+  color: #9356dc;
+  top: 0%;
+  top: 0%;
+  left: 0%;
+}
+
+.Icon-Heart-2 {
+  position: absolute;
+  font-size: 25px;
+  color: #9356dc;
+  top: 0%;
+  left: 0%;
+  visibility: hidden;
+  transform: scale(0);
+}
+
+.Heart-acceuil:hover .Icon-Heart-2,
+.Heart-page-restaurant:hover .Icon-Heart-2 {
+  visibility: visible;
+  transition: all 0.2s;
+  transform: scale(1);
+}
+
+.Heart-page-restaurant {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  padding: 0%;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  left: 36%;
+  top: 27%;
+}
+
+.all-Restaurant {
+  height: 1200px;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.116);
+}
+
+.Titre-Restaurant {
+  height: 7%;
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.all-Card {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.all-Card_card1, .all-Card_card2, .all-Card_card3, .all-Card_card4 {
+  height: 23%;
+  width: 87%;
+  background-color: white;
+  border-radius: 15px;
+}
+.all-Card_card1:hover, .all-Card_card2:hover, .all-Card_card3:hover, .all-Card_card4:hover {
+  box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
+}
+
+.box-Img {
+  height: 73%;
+  position: relative;
+}
+.box-Img_Img-restaurant {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0px 0px;
+  object-position: center bottom;
+}
+
+.Img-restaurant--modifier {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0px 0px;
+  object-position: center bottom;
+  object-position: 0% -125px;
+}
+
+.new {
+  height: 26px;
+  width: 73px;
+  position: absolute;
+  top: 10%;
+  right: 4%;
+  background-color: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+}
+
+.new:hover {
+  transform: scale(1.3);
+  transition: transform 0.5s ease-in-out;
+}
+
+.text-new {
+  margin: 0%;
+  font-size: 12px;
+  color: #278870;
+  font-weight: bolder;
+}
+
+.Titre-et-icone-restaurant {
+  height: 27%;
+  display: flex;
+}
+.Titre-et-icone-restaurant_Nom-location-Restaurant {
+  width: 69%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 4%;
+  text-decoration: none;
+  color: black;
+}
+.Titre-et-icone-restaurant_nom-restaurant {
+  padding-bottom: 1.5%;
+}
+
+.fleche-retour {
+  position: absolute;
+  left: 5%;
+  top: 45%;
+  width: 4%;
+}
+
+.fa-arrow-left {
+  color: black;
+}
+
+.size-Img-Entrée-plat-dessert {
+  height: 1500px;
+  width: 100%;
+  position: relative;
+}
+
+.box-image-des-pages-restaurant {
+  height: 25%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+}
+
+.Img-pages-restaurant {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0px 0px;
+  object-position: center bottom;
+  border-radius: 0%;
+}
+
+.Img-la-note-enchante {
+  object-position: center;
+}
+
+.Titre-des-restaurant {
+  font-family: Shrikhand;
+}
+
+.Entree-plat-dessert {
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  background-color: white;
+  border-radius: 45px 45px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Titre-icone-pages-restaurant {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.Box-Titre-entrée-plat-desserts {
+  text-transform: uppercase;
+  height: 10%;
+  width: 87%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 16px;
+}
+
+.Titre-des-restaurant_contain-Btn-love {
+  height: 100%;
+  width: 25%;
+  position: relative;
+}
+
+.titre-entree-plat-desserts {
+  height: 87%;
+  border-bottom: #99e2d0 3px solid;
+  width: 11%;
 }
 
 .header-acceuil,

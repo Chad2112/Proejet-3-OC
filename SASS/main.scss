@@ -4,172 +4,27 @@
 @import "./Utils/keyframe";
 @import "./Layouts/header";
 @import "./Layouts/footer";
-//***********-----------------------CSS GENERALES******************//////////////
-
-* {
-  font-family: Roboto;
-}
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
-h1,
-h2,
-h3,
-h4 {
-  font-family: Roboto-Bold;
-  margin: 0%;
-}
-body {
-  margin: 0%;
-}
-a {
-  text-decoration: none;
-}
-
-/////**********************************---------------------------CITATION ET BTN EXPLORE--------------------***************/////////////////////
-
-.Explore-restaurant {
-  height: 300px;
-  width: 100%;
-
-  &_contain-explore {
-    @include Flex-start;
-    @include width-height-max;
-    background-color: rgba(128, 128, 128, 0.137);
-  }
-
-  &_texte_all {
-    @include text-color-center;
-    @include flex-center;
-    flex-direction: column;
-    width: 75%;
-    margin-top: 35px;
-  }
-
-  &_texte_titre {
-    margin: 0%;
-  }
-
-  &_texte {
-    margin-bottom: 10%;
-  }
-
-  &_btn-principal {
-    @include Size-border-color-btn-principal;
-
-    &:hover {
-      box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
-      background-image: linear-gradient(
-        to bottom,
-        $light-color-secondary,
-        $light-color-primary
-      );
-    }
-  }
-
-  &_lien-btn {
-    @include lien-btn-principal-size-font;
-  }
-}
-
+@import "./Base/base";
+@import "./Components/buttons";
+@import "./Layouts/container";
 ///////////////////********************----------------------------FONCTIONNEMENT ET BTN----------------------************************/////////////////
 
-.Fonctionnement-et-bouton {
-  @include flex-between-column;
-  height: 350px;
-  width: 100%;
-  margin-top: 6%;
-  margin-bottom: 15%;
 
-  &_Titre {
-    @include text-color-center;
-    font-size: 16px;
-    font-weight: bolder;
-    margin: 0% 0% 5% 5%;
-  }
-}
 
-.contain-3-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
 
-  &_btn-Fonctionnement {
-    @include size-border-btn;
-    height: 27%;
-    background-color: rgba(128, 128, 128, 0.11);
-    position: relative;
-    font-weight: bolder;
 
-    &_btn-Fonctionnement:active #icone {
-      color: #9356dc;
-    }
-
-    &:active {
-      background-color: #9256dc31;
-    }
-
-    &:hover {
-      box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
-    }
-
-    &:active .fa-solid {
-      color: #9356dc;
-    }
-  }
-
-  &_lien-Choose,
-  &_lien-Compose,
-  &_lien-Degustez {
-    @include width-height-max;
-    @include flex-center;
-    text-decoration: none;
-    @include text-color-center;
-  }
-
-  &_box_number {
-    @include flex-center;
-    position: absolute;
-    left: -4%;
-    height: 36%;
-    width: 8%;
-    background-color: $Color-primary;
-    border-radius: 50%;
-    color: white;
-    font-size: 15px;
-  }
-  &_Contain-icone {
-    width: 25%;
-    @include flex-center;
-    color: grey;
-  }
-
-  &_choose-restaurant {
-    width: 75%;
-    display: flex;
-    justify-content: flex-start;
-  }
-}
 
 //****************************-----------------------------RESTAURANTS-------------------------*********************************//
 
-.all-Restaurant {
-  height: 1200px;
-  width: 100%;
-  background-color: rgba(128, 128, 128, 0.116);
 
-  &_Titre-Restaurant {
+
+  .Titre-Restaurant {
     height: 7%;
     display: flex;
     align-items: center;
     margin-left: 5%;
   }
-}
+
 
 .all-Card {
   height: 90%;
@@ -249,43 +104,6 @@ a {
   }
 }
 
-/***********************************************************BTN j'aime*****************************/ //////////////////////////
-
-.contain-Btn-love {
-  width: 25%;
-  position: relative;
-}
-.Heart-acceuil {
-  @include Attribut-size-bouton;
-  left: 46%;
-  top: 29%;
-}
-
-.Icon-Heart {
-  position: absolute;
-  font-size: 25px;
-  color: $Color-primary;
-  top: 0%;
-  top: 0%;
-  left: 0%;
-}
-
-.Icon-Heart-2 {
-  position: absolute;
-  font-size: 25px;
-  color: $Color-primary;
-  top: 0%;
-  left: 0%;
-  visibility: hidden;
-  transform: scale(0);
-}
-
-.Heart-acceuil:hover .Icon-Heart-2,
-.Heart-page-restaurant:hover .Icon-Heart-2 {
-  visibility: visible;
-  transition: all 0.2s;
-  transform: scale(1);
-}
 
 /////*******************************------------------------------------------Page des restaurant------------------------************************////////////////
 .fleche-retour {
@@ -335,22 +153,17 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly;}
 
-  &_Titre-icone-pages-restaurant {
-    display: flex;
-    height: 10%;
-    font-size: 20px;
+  .Titre-icone-pages-restaurant {
     width: 100%;
-    margin-left: 10%;
+    height: 5%;
+    @include flex-center;
+    margin-top: 5%;
   }
-}
+  
 
-.Heart-page-restaurant {
-  @include Attribut-size-bouton;
-  left: 36%;
-  top: 27%;
-}
+
 
 ////////////////////////////*********************************------------------------------------BTN RESTAURANT--------------------------***************************////////////////
 
@@ -364,12 +177,6 @@ a {
   margin-left: 16px;
 }
 
-.Entree-plat-dessert_Titre-et-icone-restaurant {
-  width: 100%;
-  height: 5%;
-  @include flex-center;
-  margin-top: 5%;
-}
 
 .Titre-des-restaurant_contain-Btn-love {
   height: 100%;
@@ -383,115 +190,10 @@ a {
   width: 11%;
 }
 
-.contain-btn-restaurant {
-  @include flex-between-column-aligncenter;
-  width: 100%;
-  height: 25%;
 
-  .btn-entree {
-    opacity: 0;
-    animation: transition 1s ease-in-out 2s forwards;
-    animation-delay: 1s;
-  }
-
-  .btn-plat {
-    opacity: 0;
-    animation: transition 1s ease-in-out 2s forwards;
-    animation-delay: 1.5s;
-  }
-
-  .btn-dessert {
-    opacity: 0;
-    animation: transition 1s ease-in-out 2s forwards;
-    animation-delay: 2s;
-  }
-}
-
-.Margin-btn-restaurant {
-  margin-top: 10%;
-}
-
-.btn-entrée-plat-dessert {
-  @include size-border-btn;
-  font-weight: bolder;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0%;
-  cursor: pointer;
-  transition: all 450ms;
-  overflow: hidden;
-
-  &:hover {
-    box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
-  }
-
-  &:hover &_valide {
-    display: block;
-  }
-
-  &:focus &_fa-circle-check {
-    transform: rotate(0deg);
-    transition: transform 1s;
-  }
-
-  &_valide {
-    background-color: $Color-Tertiaire;
-    height: 100%;
-    display: none;
-    width: 22%;
-    color: white;
-    animation: slid 500ms ease-in-out forwards;
-  }
-
-  &_icon-check {
-    @include flex-center;
-    @include width-height-max;
-  }
-
-  &_Nom-du-plat {
-    white-space: nowrap;
-    text-align: left;
-    padding-left: 5%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  &_commentaire-plat {
-    font-size: 14px;
-    font-weight: 500;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  &_prix-plat {
-    margin-right: 1%;
-  }
-}
-
-.fa-circle-check {
-  font-size: 40px;
-  transform: rotate(-360deg);
-}
-
-.btn-commander {
-  @include Size-border-color-btn-principal;
-
-  &:hover {
-    box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
-    background-image: linear-gradient(
-      to bottom,
-      $light-color-secondary,
-      $light-color-primary
-    );
-  }
-}
-
-.lien-btn-commander {
-  @include lien-btn-principal-size-font;
 
   //////////////*********************-------------------------------------  LOAD SPINNER  -------------------------------------------***********************///////////////////////////////
-}
+
 
 .header-acceuil,
 .main-acceuil,

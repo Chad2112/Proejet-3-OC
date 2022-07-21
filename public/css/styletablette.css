@@ -1,11 +1,38 @@
-.contain-header {
+.header {
     background-color: rgba(128, 128, 128, 0.192);
     height: 80px;
+    padding-top: 2%;
 }
 
-.contain-btn-restaurant {
-    height: 65%;
+.header__box-logo {
+    width: 20%;
 }
+
+.Fonctionnement {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    height: 270px;
+    align-items: center;
+}
+
+.Fonctionnement__Titre {
+    margin: 0%;
+    justify-content: center;
+    width: 100%;
+    font-size: 30px;
+}
+
+.Fonctionnement__contain {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.Fonctionnement__btn {
+    width: 27%;
+    height: 35%;
+}
+
 
 .Titre-icone-pages-restaurant {
     margin: 0%;
@@ -19,42 +46,12 @@
     top: 0%;
 }
 
-.contain-header {
-    padding-top: 2%;
-}
 
-.contain-header_box-logo {
-    width: 20%;
-}
-
-.contain-3-btn {
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.contain-3-btn_btn-Fonctionnement {
-    width: 27%;
-    height: 35%;
-}
-
-.Fonctionnement-et-bouton_Titre {
-    margin: 0%;
-    justify-content: center;
-    width: 100%;
-    font-size: 30px;
-}
 
 .Explore-restaurant_texte_all {
     width: 50%;
 }
 
-.Fonctionnement-et-bouton {
-    margin-bottom: 2%;
-    margin-top: 2%;
-    height: 270px;
-    align-items: center;
-}
 
 .all-Restaurant_Titre-Restaurant {
     height: 9%;
@@ -107,6 +104,12 @@
     height: 64%;
     width: 100%;
 }
+
+.contain-btn-restaurant {
+    height: 60%;
+    width: 32%;
+}
+
 
 .Entree-plat-dessert_Titre-et-icone-restaurant {
     margin-top: 4%;
