@@ -4,7 +4,7 @@ footer {
   background-color: rgb(56, 56, 56);
 }
 
-.all-footer {
+.footer {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -15,11 +15,11 @@ footer {
 
   color: white;
 
-  .box-lien-footer {
+  &__lien {
     width: 100%;
   }
 
-  .titre-footer-ohmyfood {
+  &__logo {
     font-family: Shrikhand;
     font-size: 20px;
     padding-bottom: 15%;

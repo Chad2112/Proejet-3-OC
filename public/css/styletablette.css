@@ -4,35 +4,71 @@
     padding-top: 2%;
 }
 
-.header__box-logo {
+.header__boxlogo {
     width: 20%;
 }
 
-.Fonctionnement {
+.fonctionnement {
     margin-bottom: 2%;
     margin-top: 2%;
     height: 270px;
     align-items: center;
 }
 
-.Fonctionnement__Titre {
+.fonctionnement__Titre {
     margin: 0%;
     justify-content: center;
     width: 100%;
     font-size: 30px;
 }
 
-.Fonctionnement__contain {
+.fonctionnement__contain {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
 }
 
-.Fonctionnement__btn {
+.fonctionnement__btn {
     width: 27%;
     height: 35%;
 }
 
+
+.Explore__boxtxt {
+    width: 50%;
+}
+
+.restaurant {
+    height: 850px;
+}
+
+.restaurant__titre {
+    height: 9%;
+    justify-content: center;
+    margin: 0%;
+    font-size: 35px;
+}
+
+.restaurant__card {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card {
+    width: 42%;
+    height: 44%;
+}
+
+.card__boximg {
+    object-position: center;
+}
+
+.card__img {
+    height: 100%;
+}
+
+/*---------------------------------------------------------------------------*/
 
 .Titre-icone-pages-restaurant {
     margin: 0%;
@@ -46,49 +82,10 @@
     top: 0%;
 }
 
-
-
-.Explore-restaurant_texte_all {
-    width: 50%;
-}
-
-
-.all-Restaurant_Titre-Restaurant {
-    height: 9%;
-    justify-content: center;
-    margin: 0%;
-    font-size: 35px;
-}
-
-.all-Card {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.all-Card_card1,
-.all-Card_card2,
-.all-Card_card3,
-.all-Card_card4 {
-    width: 42%;
-    height: 44%;
-}
-
-.box-Img_Img-restaurant {
-    object-position: center;
-}
-
-.Img-pages-restaurant {
-    height: 100%;
-}
-
 .box-image-des-pages-restaurant {
     height: 48%;
 }
 
-.all-Restaurant {
-    height: 850px;
-}
 
 .btn-commander {
     position: absolute;
@@ -135,7 +132,7 @@ footer {
     height: 100%;
 }
 
-.all-footer {
+.footer {
     flex-direction: column;
     padding-top: 2%;
     padding-bottom: 2%;

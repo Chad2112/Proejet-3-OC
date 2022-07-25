@@ -7,7 +7,7 @@
   box-shadow: 0px 1px 25px 1px rgba(0, 0, 0, 0.281);
   position: relative;
 
-  &__box-logo {
+  &__boxlogo {
     width: 45%;
   }
 
@@ -22,7 +22,7 @@
   @include flex-center;
   background-color: rgba(128, 128, 128, 0.199);
 
-  &__bloc-icone {
+  &__blocicone {
     @include flex-center;
     height: 100%;
   }
@@ -54,7 +54,7 @@
     background-color: rgba(128, 128, 128, 0.137);
   }
 
-  &__box-txt {
+  &__boxtxt {
     @include text-color-center;
     @include flex-center;
     flex-direction: column;

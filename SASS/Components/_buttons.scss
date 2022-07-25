@@ -15,7 +15,7 @@
     @include lien-btn-principal-size-font;
   }
 
-  .Fonctionnement {
+  .fonctionnement {
     @include flex-between-column;
     height: 350px;
     width: 100%;
@@ -69,7 +69,7 @@
       @include text-color-center;
     }
   
-    &__box_number {
+    &__boxnumber {
       @include flex-center;
       position: absolute;
       left: -4%;
@@ -92,23 +92,54 @@
       justify-content: flex-start;
     }
 }
+
+.card {
+  &__boxbtn {
+    height: 100%;
+    width: 25%;
+    position: relative;
+  }
+
+  &__heartacceuil {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    padding: 0%;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    left: 46%;
+    top: 29%;
+  }
+  
+  &__icone1 {
+    position: absolute;
+    font-size: 25px;
+    color: #9356dc;
+    top: 0%;
+    top: 0%;
+    left: 0%;
+  }
+  
+  &__icone2 {
+    position: absolute;
+    font-size: 25px;
+    color: #9356dc;
+    top: 0%;
+    left: 0%;
+    visibility: hidden;
+    transform: scale(0);
+  }
+  
+  .card__heartacceuil:hover .card__icone2 {
+    visibility: visible;
+    transition: all 0.2s;
+    transform: scale(1);
+  }
+}
   
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .contain-btn-restaurant {
     @include flex-between-column-aligncenter;
     width: 100%;
@@ -217,41 +248,7 @@
     @include lien-btn-principal-size-font;
   }
 
-  .contain-Btn-love {
-    width: 25%;
-    position: relative;
-  }
-  .Heart-acceuil {
-    @include Attribut-size-bouton;
-    left: 46%;
-    top: 29%;
-  }
-  
-  .Icon-Heart {
-    position: absolute;
-    font-size: 25px;
-    color: $Color-primary;
-    top: 0%;
-    top: 0%;
-    left: 0%;
-  }
-  
-  .Icon-Heart-2 {
-    position: absolute;
-    font-size: 25px;
-    color: $Color-primary;
-    top: 0%;
-    left: 0%;
-    visibility: hidden;
-    transform: scale(0);
-  }
-  
-  .Heart-acceuil:hover .Icon-Heart-2,
-  .Heart-page-restaurant:hover .Icon-Heart-2 {
-    visibility: visible;
-    transition: all 0.2s;
-    transform: scale(1);
-  }
+
 
   .Heart-page-restaurant {
     @include Attribut-size-bouton;

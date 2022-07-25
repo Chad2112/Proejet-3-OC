@@ -63,7 +63,7 @@
   box-shadow: 0px 1px 25px 1px rgba(0, 0, 0, 0.281);
   position: relative;
 }
-.header__box-logo {
+.header__boxlogo {
   width: 45%;
 }
 .header__logo {
@@ -79,7 +79,7 @@
   align-items: center;
   background-color: rgba(128, 128, 128, 0.199);
 }
-.location__bloc-icone {
+.location__blocicone {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,7 +113,7 @@
   height: 100%;
   background-color: rgba(128, 128, 128, 0.137);
 }
-.Explore__box-txt {
+.Explore__boxtxt {
   text-align: center;
   color: black;
   display: flex;
@@ -136,7 +136,7 @@ footer {
   background-color: rgb(56, 56, 56);
 }
 
-.all-footer {
+.footer {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -146,10 +146,10 @@ footer {
   padding-top: 6%;
   color: white;
 }
-.all-footer .box-lien-footer {
+.footer__lien {
   width: 100%;
 }
-.all-footer .titre-footer-ohmyfood {
+.footer__logo {
   font-family: Shrikhand;
   font-size: 20px;
   padding-bottom: 15%;
@@ -225,7 +225,7 @@ a {
   color: white;
 }
 
-.Fonctionnement {
+.fonctionnement {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -235,14 +235,14 @@ a {
   margin-top: 6%;
   margin-bottom: 15%;
 }
-.Fonctionnement__Titre {
+.fonctionnement__Titre {
   text-align: center;
   color: black;
   font-size: 16px;
   font-weight: bolder;
   margin: 0% 0% 5% 5%;
 }
-.Fonctionnement__contain {
+.fonctionnement__contain {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -250,7 +250,7 @@ a {
   height: 100%;
   width: 100%;
 }
-.Fonctionnement__btn {
+.fonctionnement__btn {
   height: 25%;
   width: 87%;
   border-radius: 20px;
@@ -261,19 +261,19 @@ a {
   position: relative;
   font-weight: bolder;
 }
-.Fonctionnement__btn__btn:active #icone {
+.fonctionnement__btn__btn:active #icone {
   color: #9356dc;
 }
-.Fonctionnement__btn:active {
+.fonctionnement__btn:active {
   background-color: rgba(146, 86, 220, 0.1921568627);
 }
-.Fonctionnement__btn:hover {
+.fonctionnement__btn:hover {
   box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
 }
-.Fonctionnement__btn:active .fa-solid {
+.fonctionnement__btn:active .fa-solid {
   color: #9356dc;
 }
-.Fonctionnement__lien {
+.fonctionnement__lien {
   width: 100%;
   height: 100%;
   display: flex;
@@ -283,7 +283,7 @@ a {
   text-align: center;
   color: black;
 }
-.Fonctionnement__box_number {
+.fonctionnement__boxnumber {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -296,17 +296,57 @@ a {
   color: white;
   font-size: 15px;
 }
-.Fonctionnement__icone {
+.fonctionnement__icone {
   width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: grey;
 }
-.Fonctionnement__texte {
+.fonctionnement__texte {
   width: 75%;
   display: flex;
   justify-content: flex-start;
+}
+
+.card__boxbtn {
+  height: 100%;
+  width: 25%;
+  position: relative;
+}
+.card__heartacceuil {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  padding: 0%;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  left: 46%;
+  top: 29%;
+}
+.card__icone1 {
+  position: absolute;
+  font-size: 25px;
+  color: #9356dc;
+  top: 0%;
+  top: 0%;
+  left: 0%;
+}
+.card__icone2 {
+  position: absolute;
+  font-size: 25px;
+  color: #9356dc;
+  top: 0%;
+  left: 0%;
+  visibility: hidden;
+  transform: scale(0);
+}
+.card .card__heartacceuil:hover .card__icone2 {
+  visibility: visible;
+  transition: all 0.2s;
+  transform: scale(1);
 }
 
 .contain-btn-restaurant {
@@ -422,50 +462,6 @@ a {
   color: white;
 }
 
-.contain-Btn-love {
-  width: 25%;
-  position: relative;
-}
-
-.Heart-acceuil {
-  position: absolute;
-  height: 25px;
-  width: 25px;
-  padding: 0%;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-  left: 46%;
-  top: 29%;
-}
-
-.Icon-Heart {
-  position: absolute;
-  font-size: 25px;
-  color: #9356dc;
-  top: 0%;
-  top: 0%;
-  left: 0%;
-}
-
-.Icon-Heart-2 {
-  position: absolute;
-  font-size: 25px;
-  color: #9356dc;
-  top: 0%;
-  left: 0%;
-  visibility: hidden;
-  transform: scale(0);
-}
-
-.Heart-acceuil:hover .Icon-Heart-2,
-.Heart-page-restaurant:hover .Icon-Heart-2 {
-  visibility: visible;
-  transition: all 0.2s;
-  transform: scale(1);
-}
-
 .Heart-page-restaurant {
   position: absolute;
   height: 25px;
@@ -479,49 +475,48 @@ a {
   top: 27%;
 }
 
-.all-Restaurant {
+.restaurant {
   height: 1200px;
   width: 100%;
   background-color: rgba(128, 128, 128, 0.116);
 }
 
-.Titre-Restaurant {
+.restaurant__titre {
   height: 7%;
   display: flex;
   align-items: center;
   margin-left: 5%;
 }
 
-.all-Card {
+.restaurant__card {
   height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.all-Card_card1, .all-Card_card2, .all-Card_card3, .all-Card_card4 {
+
+.card {
   height: 23%;
   width: 87%;
   background-color: white;
   border-radius: 15px;
 }
-.all-Card_card1:hover, .all-Card_card2:hover, .all-Card_card3:hover, .all-Card_card4:hover {
+.card:hover {
   box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
 }
-
-.box-Img {
+.card__boximg {
   height: 73%;
   position: relative;
 }
-.box-Img_Img-restaurant {
+.card__img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 15px 15px 0px 0px;
   object-position: center bottom;
 }
-
-.Img-restaurant--modifier {
+.card .Img-restaurant--modifier {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -529,8 +524,7 @@ a {
   object-position: center bottom;
   object-position: 0% -125px;
 }
-
-.new {
+.card__new {
   height: 26px;
   width: 73px;
   position: absolute;
@@ -542,24 +536,21 @@ a {
   align-items: center;
   transform: scale(1);
 }
-
-.new:hover {
+.card .card__new:hover {
   transform: scale(1.3);
   transition: transform 0.5s ease-in-out;
 }
-
-.text-new {
+.card__textnew {
   margin: 0%;
   font-size: 12px;
   color: #278870;
   font-weight: bolder;
 }
-
-.Titre-et-icone-restaurant {
+.card__boxtexte {
   height: 27%;
   display: flex;
 }
-.Titre-et-icone-restaurant_Nom-location-Restaurant {
+.card__texte {
   width: 69%;
   height: 100%;
   display: flex;
@@ -570,7 +561,7 @@ a {
   text-decoration: none;
   color: black;
 }
-.Titre-et-icone-restaurant_nom-restaurant {
+.card__titre {
   padding-bottom: 1.5%;
 }
 
@@ -645,12 +636,6 @@ a {
   align-items: flex-start;
   justify-content: flex-start;
   margin-left: 16px;
-}
-
-.Titre-des-restaurant_contain-Btn-love {
-  height: 100%;
-  width: 25%;
-  position: relative;
 }
 
 .titre-entree-plat-desserts {

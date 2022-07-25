@@ -7,18 +7,11 @@
 @import "./Base/base";
 @import "./Components/buttons";
 @import "./Layouts/container";
-///////////////////********************----------------------------FONCTIONNEMENT ET BTN----------------------************************/////////////////
-
-
-
-
-
-
 //****************************-----------------------------RESTAURANTS-------------------------*********************************//
 
 
 
-  .Titre-Restaurant {
+  .restaurant__titre {
     height: 7%;
     display: flex;
     align-items: center;
@@ -26,17 +19,14 @@
   }
 
 
-.all-Card {
+.restaurant__card {
   height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly;}
 
-  &_card1,
-  &_card2,
-  &_card3,
-  &_card4 {
+  .card {
     height: 23%;
     width: 87%;
     background-color: white;
@@ -45,24 +35,24 @@
     &:hover {
       box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
     }
-  }
-}
+  
 
-.box-Img {
+
+&__boximg {
   height: 73%;
-  position: relative;
+  position: relative;}
 
-  &_Img-restaurant {
+  &__img{
     @include Position-Size-Image;
   }
-}
+
 
 .Img-restaurant--modifier {
   @include Position-Size-Image;
   object-position: 0% -125px;
 }
 
-.new {
+&__new {
   height: 26px;
   width: 73px;
   position: absolute;
@@ -72,23 +62,24 @@
   @include flex-center;
   transform: scale(1);
 }
-.new:hover {
+.card__new:hover {
   transform: scale(1.3);
   transition: transform 0.5s ease-in-out;
 }
 
-.text-new {
+&__textnew {
   margin: 0%;
   font-size: 12px;
   color: $darken-color-Tertiaire;
   font-weight: bolder;
 }
+  
 
-.Titre-et-icone-restaurant {
+&__boxtexte {
   height: 27%;
-  display: flex;
+  display: flex;}
 
-  &_Nom-location-Restaurant {
+  &__texte {
     width: 69%;
     height: 100%;
     display: flex;
@@ -99,10 +90,21 @@
     text-decoration: none;
     color: black;
   }
-  &_nom-restaurant {
+  &__titre {
     padding-bottom: 1.5%;
   }
+
 }
+  //.card_heartacceuil:hover .card_icone1,
+  //.Heart-page-restaurant:hover .card_icone2 {
+   // visibility: visible;
+   // transition: all 0.2s;
+   // transform: scale(1);
+  
+  
+  
+
+  
 
 
 /////*******************************------------------------------------------Page des restaurant------------------------************************////////////////
@@ -178,11 +180,6 @@
 }
 
 
-.Titre-des-restaurant_contain-Btn-love {
-  height: 100%;
-  width: 25%;
-  position: relative;
-}
 
 .titre-entree-plat-desserts {
   height: 87%;
