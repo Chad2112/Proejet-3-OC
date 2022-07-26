@@ -70,7 +70,20 @@
 
 /*---------------------------------------------------------------------------*/
 
-.Titre-icone-pages-restaurant {
+.mainrestaurant {
+    height: 1000px;
+    background-color: rgba(128, 128, 128, 0.253);
+}
+
+.mainrestaurant__boximg {
+    height: 48%;
+}
+
+.img-note-enchantee {
+    object-position: center;
+}
+
+.selection__boxtitre {
     margin: 0%;
     position: absolute;
     top: 5%;
@@ -78,22 +91,12 @@
     left: 35%;
 }
 
-.Heart-page-restaurant {
+.selection__heartrestaurant {
     top: 0%;
 }
 
-.box-image-des-pages-restaurant {
-    height: 48%;
-}
 
-
-.btn-commander {
-    position: absolute;
-    bottom: 3%;
-    width: 18%;
-}
-
-.Entree-plat-dessert {
+.selection {
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -102,30 +105,20 @@
     width: 100%;
 }
 
-.contain-btn-restaurant {
+.menu {
     height: 60%;
     width: 32%;
 }
 
+.menu-margin {
+    margin: 0%;
+}
 
-.Entree-plat-dessert_Titre-et-icone-restaurant {
-    margin-top: 4%;
+.btncommander {
+    margin: 0%;
     position: absolute;
-    top: 0%;
-    left: 7%;
-}
-
-.size-Img-Entrée-plat-dessert {
-    height: 1000px;
-    background-color: rgba(128, 128, 128, 0.253);
-}
-
-.Margin-btn-restaurant {
-    margin: 0%;
-}
-
-.btn-commander {
-    margin: 0%;
+    bottom: 3%;
+    width: 18%;
 }
 
 footer {

@@ -7,6 +7,10 @@
     width: 20%;
 }
 
+.Explore {
+    height: 250px;
+}
+
 .fonctionnement {
     margin-bottom: 2%;
     margin-top: 2%;
@@ -29,22 +33,14 @@
     width: 75%;
 }
 
-
-
 .fonctionnement__btn {
     width: 27%;
     height: 44%;
 }
 
-
-
 .Explore__boxtxt {
     width: 30%;
 }
-
-
-
-
 
 .restaurant {
     height: 850px;
@@ -68,22 +64,35 @@
     height: 44%;
 }
 
-.card__boximg {
+.card__img,
+.card__img--modifier {
     object-position: center;
 }
 
-
-.btn-commander {
-    position: absolute;
-    bottom: 3%;
-    width: 18%;
+.mainrestaurant {
+    height: 1000px;
+    background-color: rgba(128, 128, 128, 0.253);
 }
 
+.mainrestaurant__boximg {
+    height: 55%;
+    overflow: hidden;
+}
 
+.mainrestaurant__img {
+    height: 125%;
+}
 
+.img-note-enchantee {
+    object-position: 0px 67%;
+}
 
+.img-a-la-francaise,
+.img-la-palette-du-gout {
+    object-position: 0px 90%;
+}
 
-.Entree-plat-dessert {
+.selection {
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -91,22 +100,15 @@
     height: 59%;
     width: 80%;
     left: 10%;
-
-
 }
 
-.contain-btn-restaurant {
-    height: 60%;
-    width: 32%;
-}
-
-.Titre-icone-pages-restaurant {
+.selection__boxtitre {
     margin-top: 4%;
     position: absolute;
     top: 0%;
 }
 
-.Titre-icone-pages-restaurant {
+.selection__boxtitre {
     margin: 0%;
     position: absolute;
     top: 5%;
@@ -114,41 +116,24 @@
     left: 35%;
 }
 
-
-.Heart-page-restaurant {
+.selection__heartrestaurant {
     top: 0%;
 }
 
-.box-image-des-pages-restaurant {
-    height: 55%;
-    overflow: hidden;
+.menu {
+    height: 60%;
+    width: 32%;
 }
 
-.Img-a-la-francaise {
-    height: 135%;
-}
-
-.Img-la-palette-du-gout {
-    height: 135%;
-
-}
-
-.Img-le-delice-des-sens {
-    height: 125%;
-}
-
-
-.size-Img-Entrée-plat-dessert {
-    height: 1000px;
-    background-color: rgba(128, 128, 128, 0.253)
-}
-
-.Margin-btn-restaurant {
+.menu-margin {
     margin: 0%;
 }
 
-.btn-commander {
+.btncommander {
     margin: 0%;
+    position: absolute;
+    bottom: 3%;
+    width: 18%;
 }
 
 footer {

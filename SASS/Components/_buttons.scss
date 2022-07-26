@@ -1,96 +1,96 @@
 .Explore__btn {
-    @include Size-border-color-btn-principal;
+  @include Size-border-color-btn-principal;
 
-    &:hover {
-      box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
-      background-image: linear-gradient(
-        to bottom,
-        $light-color-secondary,
-        $light-color-primary
-      );
-    }
+  &:hover {
+    box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
+    background-image: linear-gradient(
+      to bottom,
+      $light-color-secondary,
+      $light-color-primary
+    );
+  }
+}
+
+.Explore__lien {
+  @include lien-btn-principal-size-font;
+}
+
+.fonctionnement {
+  @include flex-between-column;
+  height: 350px;
+  width: 100%;
+  margin-top: 6%;
+  margin-bottom: 15%;
+
+  &__Titre {
+    @include text-color-center;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 0% 0% 5% 5%;
   }
 
-  .Explore__lien {
-    @include lien-btn-principal-size-font;
-  }
-
-  .fonctionnement {
-    @include flex-between-column;
-    height: 350px;
-    width: 100%;
-    margin-top: 6%;
-    margin-bottom: 15%;
-
-    &__Titre {
-        @include text-color-center;
-        font-size: 16px;
-        font-weight: bolder;
-        margin: 0% 0% 5% 5%;
-      }
-
-&__contain {
+  &__contain {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     height: 100%;
-    width: 100%;}
-  
-    &__btn {
-      @include size-border-btn;
-      height: 27%;
-      background-color: rgba(128, 128, 128, 0.11);
-      position: relative;
-      font-weight: bolder;
-  
-      &__btn:active #icone {
-        color: #9356dc;
-      }
-  
-      &:active {
-        background-color: #9256dc31;
-      }
-  
-      &:hover {
-        box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
-      }
-  
-      &:active .fa-solid {
-        color: #9356dc;
-      }
+    width: 100%;
+  }
+
+  &__btn {
+    @include size-border-btn;
+    height: 27%;
+    background-color: rgba(128, 128, 128, 0.11);
+    position: relative;
+    font-weight: bolder;
+
+    &__btn:active #icone {
+      color: #9356dc;
     }
 
-  
-    &__lien {
-      @include width-height-max;
-      @include flex-center;
-      text-decoration: none;
-      @include text-color-center;
+    &:active {
+      background-color: #9256dc31;
     }
-  
-    &__boxnumber {
-      @include flex-center;
-      position: absolute;
-      left: -4%;
-      height: 36%;
-      width: 8%;
-      background-color: $Color-primary;
-      border-radius: 50%;
-      color: white;
-      font-size: 15px;
+
+    &:hover {
+      box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
     }
-    &__icone {
-      width: 25%;
-      @include flex-center;
-      color: grey;
+
+    &:active .fa-solid {
+      color: #9356dc;
     }
-  
-    &__texte {
-      width: 75%;
-      display: flex;
-      justify-content: flex-start;
-    }
+  }
+
+  &__lien {
+    @include width-height-max;
+    @include flex-center;
+    text-decoration: none;
+    @include text-color-center;
+  }
+
+  &__boxnumber {
+    @include flex-center;
+    position: absolute;
+    left: -4%;
+    height: 36%;
+    width: 8%;
+    background-color: $Color-primary;
+    border-radius: 50%;
+    color: white;
+    font-size: 15px;
+  }
+  &__icone {
+    width: 25%;
+    @include flex-center;
+    color: grey;
+  }
+
+  &__texte {
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .card {
@@ -101,74 +101,50 @@
   }
 
   &__heartacceuil {
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    padding: 0%;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
+    @include Attribut-size-bouton;
     left: 46%;
     top: 29%;
   }
-  
+
   &__icone1 {
-    position: absolute;
-    font-size: 25px;
-    color: #9356dc;
-    top: 0%;
-    top: 0%;
-    left: 0%;
+    @include heart1;
   }
-  
+
   &__icone2 {
-    position: absolute;
-    font-size: 25px;
-    color: #9356dc;
-    top: 0%;
-    left: 0%;
-    visibility: hidden;
-    transform: scale(0);
-  }
-  
-  .card__heartacceuil:hover .card__icone2 {
-    visibility: visible;
-    transition: all 0.2s;
-    transform: scale(1);
+    @include heart2;
   }
 }
-  
-  
-.contain-btn-restaurant {
-    @include flex-between-column-aligncenter;
-    width: 100%;
-    height: 25%;
-  
-    .btn-entree {
-      opacity: 0;
-      animation: transition 1s ease-in-out 2s forwards;
-      animation-delay: 1s;
-    }
-  
-    .btn-plat {
-      opacity: 0;
-      animation: transition 1s ease-in-out 2s forwards;
-      animation-delay: 1.5s;
-    }
-  
-    .btn-dessert {
-      opacity: 0;
-      animation: transition 1s ease-in-out 2s forwards;
-      animation-delay: 2s;
-    }
+
+.selection {
+  &__boxbtn {
+    height: 100%;
+    width: 25%;
+    position: relative;
   }
-  
-  .Margin-btn-restaurant {
-    margin-top: 10%;
+
+  &__heartrestaurant {
+    @include Attribut-size-bouton;
+    left: 36%;
+    top: 27%;
   }
-  
-  .btn-entrée-plat-dessert {
+  &__icone1 {
+    @include heart1;
+  }
+
+  &__icone2 {
+    @include heart2;
+  }
+}
+
+.card__heartacceuil:hover .card__icone2,
+.selection__heartrestaurant:hover .selection__icone2 {
+  visibility: visible;
+  transition: all 0.2s;
+  transform: scale(1);
+}
+
+.menu {
+  &__btn {
     @include size-border-btn;
     font-weight: bolder;
     display: flex;
@@ -178,80 +154,88 @@
     cursor: pointer;
     transition: all 450ms;
     overflow: hidden;
-  
+
     &:hover {
       box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
     }
-  
-    &:hover &_valide {
+
+    &:hover .menu__valide {
       display: block;
+      
     }
-  
-    &:focus &_fa-circle-check {
-      transform: rotate(0deg);
-      transition: transform 1s;
-    }
-  
-    &_valide {
-      background-color: $Color-Tertiaire;
-      height: 100%;
-      display: none;
-      width: 22%;
-      color: white;
-      animation: slid 500ms ease-in-out forwards;
-    }
-  
-    &_icon-check {
-      @include flex-center;
-      @include width-height-max;
-    }
-  
-    &_Nom-du-plat {
-      white-space: nowrap;
-      text-align: left;
-      padding-left: 5%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  
-    &_commentaire-plat {
-      font-size: 14px;
-      font-weight: 500;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  
-    &_prix-plat {
-      margin-right: 1%;
-    }
+
   }
-  
-  .fa-circle-check {
-    font-size: 40px;
-    transform: rotate(-360deg);
+
+  &__nom {
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  
-  .btn-commander {
-    @include Size-border-color-btn-principal;
-  
-    &:hover {
-      box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
-      background-image: linear-gradient(
-        to bottom,
-        $light-color-secondary,
-        $light-color-primary
-      );
-    }
+
+  &__commentaire {
+    font-size: 14px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  
-  .lien-btn-commander {
-    @include lien-btn-principal-size-font;
+  &__prix {
+    margin-right: 1%;
+  }
+
+  &__valide {
+    background-color: $Color-Tertiaire;
+    height: 100%;
+    display: none;
+    width: 22%;
+    color: white;
+    animation: slid 500ms ease-in-out forwards;
+  }
+
+  &__icone {
+    @include flex-center;
+    @include width-height-max;
+  }
+
+  .btn__entree {
+    opacity: 0;
+    animation: transition 1s ease-in-out 2s forwards;
+    animation-delay: 1s;
+  }
+
+  .btn__plat {
+    opacity: 0;
+    animation: transition 1s ease-in-out 2s forwards;
+    animation-delay: 1.5s;
+  }
+
+  .btn__dessert {
+    opacity: 0;
+    animation: transition 1s ease-in-out 2s forwards;
+    animation-delay: 2s;
+  }
+}
+.fa-circle-check {
+  font-size: 40px;
+  animation: rotate 1s forwards;
+}
+
+.btncommander {
+  @include Size-border-color-btn-principal;
+  margin: 10%;
+
+  &:hover {
+    box-shadow: 0px 0px 23px 0px rgb(128, 128, 128);
+    background-image: linear-gradient(
+      to bottom,
+      $light-color-secondary,
+      $light-color-primary
+    );
   }
 
 
-
-  .Heart-page-restaurant {
-    @include Attribut-size-bouton;
-    left: 36%;
-    top: 27%;
-  }
+  &__lien {
+  @include lien-btn-principal-size-font;
+}
+}

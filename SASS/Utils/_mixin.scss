@@ -76,3 +76,24 @@
   font-size: 17px;
   color: white;
 }
+
+@mixin heart1 {
+  position: absolute;
+    font-size: 25px;
+    color: #9356dc;
+    top: 0%;
+    top: 0%;
+    left: 0%;
+  
+}
+
+@mixin heart2{
+  position: absolute;
+    font-size: 25px;
+    color: #9356dc;
+    top: 0%;
+    left: 0%;
+    visibility: hidden;
+    transform: scale(0);
+  
+}
