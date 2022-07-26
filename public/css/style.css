@@ -12,7 +12,7 @@
 }
 @keyframes slid {
   0% {
-    margin-right: -70px;
+    margin-right: -110px;
     opacity: 0;
   }
   100% {
@@ -402,6 +402,7 @@ a {
   padding-left: 5%;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 100%;
 }
 .menu__commentaire {
   font-size: 14px;
@@ -410,13 +411,13 @@ a {
   text-overflow: ellipsis;
 }
 .menu__prix {
-  margin-right: 1%;
+  margin-right: 3%;
 }
 .menu__valide {
   background-color: #99e2d0;
   height: 100%;
   display: none;
-  width: 22%;
+  width: 30%;
   color: white;
   animation: slid 500ms ease-in-out forwards;
 }
@@ -445,7 +446,7 @@ a {
 
 .fa-circle-check {
   font-size: 40px;
-  animation: rotate 1s forwards;
+  animation: rotate 850ms forwards;
 }
 
 .btncommander {
