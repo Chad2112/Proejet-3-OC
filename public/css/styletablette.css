@@ -33,6 +33,9 @@
     height: 35%;
 }
 
+.Explore {
+    height: 270px;
+}
 
 .Explore__boxtxt {
     width: 50%;
@@ -131,7 +134,7 @@ footer {
     padding-bottom: 2%;
     margin: 0%;
     align-items: center;
-    height: 296px;
+    height: 200px;
 }
 
 ul {
