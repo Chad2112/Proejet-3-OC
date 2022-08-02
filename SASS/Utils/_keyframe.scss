@@ -10,6 +10,19 @@
   }
 }
 
+@keyframes notslid {
+  0% {
+    margin-right: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    margin-right: -110px;
+    opacity: 0;
+  }
+}
+
+
 @keyframes transition {
   0% {
     margin-right: -210px;

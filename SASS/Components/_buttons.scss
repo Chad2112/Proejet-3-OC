@@ -163,7 +163,13 @@
       display: block;
       
     }
-
+  
+    &:not(:hover) .menu__valide {
+      display: block;
+      animation: notslid 500ms ease-in-out forwards;
+      
+    }
+  
   }
 
   &__nom {
@@ -172,7 +178,7 @@
     padding-left: 5%;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%;
+    width: 77%;
   }
 
   &__commentaire {
